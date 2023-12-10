@@ -1,12 +1,15 @@
-import React from 'react';
-
+import React from 'react'
+import TextSlider from './TextSlider'
+import Slideshow from './Slideshow'
 
 const Dashboard = () => {
   return (
+
     <div>
-      <p>this is dashboard</p>
+      <Slideshow/>
+      <TextSlider/>
     </div>
   )
 }
 
-export default Dashboard;
+export default Dashboard
