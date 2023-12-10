@@ -45,9 +45,10 @@ const ApplicationProcess = () => {
       {/* Render questions and simplified checkboxes */}
       {questions.map((question, index) => (
         <div key={index} className="mb-4 flex items-center">
-          <label className="mr-2 text-lg">{question}</label>
+          <label className="mr-2 text-base text-gray-800">{question}</label>
           <input
             type="checkbox"
+            className='form-checkbox h-5 w-5 text-black border-gray-300'
             onChange={() => handleCheckboxChange(question, true)}
           />
         </div>
@@ -55,7 +56,7 @@ const ApplicationProcess = () => {
 
       {/* Validate and Submit Button */}
       <button
-        className="bg-black text-white py-2 px-4 rounded-md mt-4"
+        className="bg-gray-800 text-white py-2 px-4 rounded-md mt-4 hover:bg:gray-700"
         onClick={handleValidateAndSubmit}
       >
         Validate and Submit
