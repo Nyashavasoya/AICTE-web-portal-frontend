@@ -23,7 +23,6 @@ const TrusteeDetailsForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/land-details');
   };
 
   return (

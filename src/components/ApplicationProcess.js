@@ -1,69 +1,103 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// ApplicationProcess.js
+
+import React from 'react';
+import { Link, Outlet, useLocation } from 'react-router-dom';
+import { FaDotCircle } from "react-icons/fa";
+
+const FormNavItem = ({ to, iconClass, formName }) => {
+  const { pathname } = useLocation();
+  const isActive = pathname.includes(to);
+
+  return (
+    <li className="mr-6">
+      <Link to={to} className={`flex items-center hover:opacity-75 ${isActive ? 'text-blue-500' : ''}`}>
+      {React.cloneElement(iconClass, { className: `mr-2` })}
+        {isActive && <span className="hidden md:inline">{formName}</span>}
+      </Link>
+    </li>
+  );
+};
+
 
 const ApplicationProcess = () => {
 
-  const navigate =useNavigate();
-
-  const [formData, setFormData] = useState({});
-
-  const handleCheckboxChange = (question, value) => {
-    setFormData({
-      ...formData,
-      [question]: value,
-    });
-  };
-
-  const handleValidateAndSubmit = () => {
-    navigate('/institute-details');
-  };
-
-  const questions = [
-    "Do you wish to apply for 'Extension of Approval (EOA)'?",
-    "Do you wish to apply for any change(s) as per the provisions of this year's Approval Process Handbook?",
-    "Merger of Courses in 'ENGINEERING AND TECHNOLOGY'",
-    "Start New Programme(s)/ Level(s) in the Existing Institution",
-    "Conversion of Management Institution running PGDM Course into MBA Course & Vice-Versa",
-    "Change in the Name of the Course(s)",
-    "Closing of MBA/PGDM Programme and Introduction of MCA Programme and vice-versa",
-    "Merger of Institution under the same Trust/ Society/ Company operating in the same Campus",
-    "Will your Institution continue as the parent Institution after the merger?",
-    "Which is the Parent Institution with which your Institution is willing to merge?",
-    "Change in the Name of the Institution",
-    "Change of Site/ Location",
-    "Conversion of Women's Institution into Co-ed Institution",
-    "Change in the Name of the Affiliating University/Board",
-    "Change in the Name of the Trust/ Society/ Company",
-    "Is your Institution selected for the 'Study in India' Program by the Govt. of India?",
-    "Does your institution have approval from PCI for PHARM.D. or/and PHARM.D. (POST BACCALAUREATE)?",
-    "Do you want to change the minority status of the institution?",
-    "Has your Institution converted into a Deemed to be/State Private University?",
-    "Does your Institution have Autonomous Status (Academic Autonomy) as conferred by the Affiliating University?",
-  ];
-
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
-      <h2 className="text-3xl font-bold mb-4">Questionnaire</h2>
+    <div>
+      {/* Header Bar */}
+      <nav className="bg-white p-4">
+        <ul className="flex">
+          
+            <FormNavItem to="/application-process/institute-details" iconClass={<FaDotCircle />} formName="Institute Details"/>
+          
+          
+           <FormNavItem to="/application-process/more-institute-details" iconClass={<FaDotCircle />} formName="More Institute Details" />
+          
+          
+           <FormNavItem to="/application-process/subsection" iconClass={<FaDotCircle />} formName="Subsection-Model" />
+          
+          
+           <FormNavItem to="/application-process/organisation-details" iconClass={<FaDotCircle />} formName="Organisation Details" />
+          
+          
+           <FormNavItem to="/application-process/trustee-details" iconClass={<FaDotCircle />} formName="Trustee Details" />
+          
+          
+           <FormNavItem to="/application-process/contact-person-details" iconClass={<FaDotCircle />} formName="Contact Person Details" />
+          
+          
+           <FormNavItem to="/application-process/questionnaire" iconClass={<FaDotCircle />} formName="Questionnaire" />
+          
+          
+           <FormNavItem to="/application-process/program-details" iconClass={<FaDotCircle />} formName="Program Details" />
+          
+          
+           <FormNavItem to="/application-process/course-details" iconClass={<FaDotCircle />} formName="Course Details" />
+          
+          
+           <FormNavItem to="/application-process/land-details" iconClass={<FaDotCircle />} formName="Land Details" />
+          
+          
+           <FormNavItem to="/application-process/more-land-details" iconClass={<FaDotCircle />} formName="More Land Details" />
+          
+          
+           <FormNavItem to="/application-process/building-details" iconClass={<FaDotCircle />} formName="Building Details" />
+          
+          
+           <FormNavItem to="/application-process/more-building-details" iconClass={<FaDotCircle />} formName="More Building Details" />
+          
+          
+           <FormNavItem to="/application-process/laboratory-details" iconClass={<FaDotCircle />} formName="Laboratory Details" />
+          
+          
+           <FormNavItem to="/application-process/administrativeArea-details" iconClass={<FaDotCircle />} formName="Administrative Area Details" />
+          
+          
+           <FormNavItem to="/application-process/amenititesArea-details" iconClass={<FaDotCircle />} formName="Amenitites Area Details" />
+          
+          
+           <FormNavItem to="/application-process/circulationArea-details" iconClass={<FaDotCircle />} formName="Circulation Area Details" />
+          
+          
+           <FormNavItem to="/application-process/instructionalArea-details" iconClass={<FaDotCircle />} formName="Instructional Area Details" />
+          
+          
+           <FormNavItem to="/application-process/infrastructuralArea-details" iconClass={<FaDotCircle />} formName="Infrastructural Area Details" />
+          
+          
+           <FormNavItem to="/application-process/hostelfacilities-details" iconClass={<FaDotCircle />} formName="Hostel Facilites Details" />
+          
+          
+           <FormNavItem to="/application-process/computationalfacilities-details" iconClass={<FaDotCircle />} formName="Computational Facilities Details" />
+          
+          
+          {/* Add more links for other forms */}
+        </ul>
+      </nav>
 
-      {/* Render questions and simplified checkboxes */}
-      {questions.map((question, index) => (
-        <div key={index} className="mb-4 flex items-center">
-          <label className="mr-2 text-base text-gray-800">{question}</label>
-          <input
-            type="checkbox"
-            className='form-checkbox h-5 w-5 text-black border-gray-300'
-            onChange={() => handleCheckboxChange(question, true)}
-          />
-        </div>
-      ))}
-
-      {/* Validate and Submit Button */}
-      <button
-        className="bg-gray-800 text-white py-2 px-4 rounded-md mt-4 hover:bg:gray-700"
-        onClick={handleValidateAndSubmit}
-      >
-        Validate and Submit
-      </button>
+      {/* Content Area */}
+      <div className="container mx-auto mt-8">
+        <Outlet />
+      </div>
     </div>
   );
 };

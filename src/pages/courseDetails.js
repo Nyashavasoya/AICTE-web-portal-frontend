@@ -31,21 +31,6 @@ const CourseDetailsForm = () => {
     e.preventDefault();
     const updatedData = [...submittedData, formData];
     setSubmittedData(updatedData);
-    setFormData({
-      programme: '',
-      affiliatingUniversity: '',
-      department: '',
-      nameOfTheCourse: '',
-      duration: '',
-      levelOfCourse: '',
-      yearStarted: '',
-      shift: '',
-      fullTimeorPartTime: '',
-      intakeApplicableFor: '',
-      applyingFor: '',
-      modeOFCounduct: '',
-      courseType: '',
-    });
   };
 
   return (

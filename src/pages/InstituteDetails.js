@@ -28,7 +28,7 @@ const InstituteDetails = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-   navigate('/contact-person-details')
+
   };
 
   return (

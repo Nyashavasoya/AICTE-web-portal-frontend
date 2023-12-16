@@ -65,7 +65,6 @@ const ContactPersonForm = ({contactPersonData}) => {
       alert('Please enter valid alternate email address');
     }
 
-    navigate('/land-details');
 
   };
 
@@ -237,7 +236,7 @@ const ContactPersonForm = ({contactPersonData}) => {
           className="w-full border border-gray-300 rounded-md p-2"
         />
       </div>
-      
+
         <div>
           <label htmlFor="mobileNumber">Contact Number</label>
           <input

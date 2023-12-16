@@ -21,11 +21,6 @@ const ProgramDetailsForm = () => {
     e.preventDefault();
     const updatedData = [...submittedData, formData];
     setSubmittedData(updatedData);
-    setFormData({
-      programme: '',
-      anyOtherNewProgram: '',
-      yearOfStart: '',
-    });
   };
 
   return (

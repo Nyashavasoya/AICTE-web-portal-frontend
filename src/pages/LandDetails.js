@@ -38,8 +38,9 @@ const LandDetailsForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md'>
+      <h2 className="text-3xl font-bold mb-4">Land Details</h2>
+      <form onSubmit={handleSubmit} className='space-y-4'>
         <div>
           <label>Select Location:</label>
           <select name="location" value={formData.location} onChange={handleChange}>
