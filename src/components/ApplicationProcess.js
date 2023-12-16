@@ -3,6 +3,8 @@
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { FaDotCircle } from "react-icons/fa";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const FormNavItem = ({ to, iconClass, formName }) => {
   const { pathname } = useLocation();
@@ -18,12 +20,38 @@ const FormNavItem = ({ to, iconClass, formName }) => {
   );
 };
 
+const IntroductionSection = ({ onStartClick }) => (
+  <div className="bg-white p-4">
+    <h1 className="text-2xl font-bold mb-4">Start Your Application Process</h1>
+    <p className="text-gray-700">
+      Welcome to the application process. Please follow the steps below to complete your application.
+      Start your application here.{' '}
+      <button type="button" onClick={onStartClick} className="text-blue-500 underline">
+        Start here
+      </button>
+    </p>
+  </div>
+);
 
 const ApplicationProcess = () => {
 
+  const [showIntroduction, setShowIntroduction] = useState(true);
+  const navigate = useNavigate();
+
+  const handleStartClick = () => {
+    setShowIntroduction(false);
+    navigate('/application-process/institute-details');
+  };
+
   return (
+
     <div>
+   
+   {showIntroduction && <IntroductionSection onStartClick={handleStartClick} />}
+
       {/* Header Bar */}
+    {!showIntroduction && (
+
       <nav className="bg-white p-4">
         <ul className="flex">
           
@@ -93,6 +121,7 @@ const ApplicationProcess = () => {
           {/* Add more links for other forms */}
         </ul>
       </nav>
+    )}
 
       {/* Content Area */}
       <div className="container mx-auto mt-8">
