@@ -54,6 +54,10 @@ const ComputationalFacilitiesForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your logic for form submission or API call here
+    const hasDeficiency = handleDeficiency();
+    if(hasDeficiency){
+        return;
+    }
     console.log('Form submitted:', formData);
   };
 
