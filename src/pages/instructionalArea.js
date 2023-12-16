@@ -23,9 +23,35 @@ const InstructionalAreaForm = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const handleDeficiency = () => {
+    if(formData.roomType === 'Computer Center'){
+        if(formData.areaOfRoom < 450){
+            alert('The area of the Room should be at least 450 square feet for Computer Centre');
+            return true;
+        }
+    }
+    else if(formData.roomType === 'Library & Reading Room'){
+        if(formData.areaOfRoom < 1360){
+            alert("The area of the Room should be more than 1360 square feet for Library & Reading Room");
+            return true;
+        }
+    }
+    else if(formData.roomType === 'Language Laboratory'){
+        if(formData.areaOfRoom < 66){
+            alert('The area of Language Lab should be less than 66 square feet');
+            return true;
+        }
+    }
+    return false;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your logic for form submission or API call here
+    const hasDeficiency = handleDeficiency();
+    if(hasDeficiency){
+        return;
+    }
     console.log('Form submitted:', formData);
   };
 
@@ -80,8 +106,10 @@ const InstructionalAreaForm = () => {
             className="mt-1 p-2 w-full border rounded-md"
           >
             <option value="">Select Room Type</option>
-            <option value="LectureHall">Lecture Hall</option>
-            <option value="Laboratory">Laboratory</option>
+            <option value="Library & Reading Room">Library & Reading Room</option>
+            <option value="Language Laboratory">Language Laboratory</option>
+            <option value="Computer Center">Language Laboratory</option>
+
             {/* Add more options as needed */}
           </select>
         </div>

@@ -5,6 +5,8 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { FaDotCircle } from "react-icons/fa";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { HiMenuAlt2 } from 'react-icons/hi';
+import QueryResolver from './QueryResolver';
 
 const FormNavItem = ({ to, iconClass, formName }) => {
   const { pathname } = useLocation();
@@ -36,6 +38,7 @@ const IntroductionSection = ({ onStartClick }) => (
 const ApplicationProcess = () => {
 
   const [showIntroduction, setShowIntroduction] = useState(true);
+  const [open, setOpen] = useState(true);
   const navigate = useNavigate();
 
   const handleStartClick = () => {
@@ -45,89 +48,120 @@ const ApplicationProcess = () => {
 
   return (
 
-    <div>
-   
-   {showIntroduction && <IntroductionSection onStartClick={handleStartClick} />}
+    <>
+    <div className='flex h-full'>
+      <div className='flex-1'>
 
-      {/* Header Bar */}
-    {!showIntroduction && (
+        {showIntroduction && <IntroductionSection onStartClick={handleStartClick} />}
 
-      <nav className="bg-white p-4">
-        <ul className="flex">
-          
-            <FormNavItem to="/application-process/institute-details" iconClass={<FaDotCircle />} formName="Institute Details"/>
-          
-          
-           <FormNavItem to="/application-process/more-institute-details" iconClass={<FaDotCircle />} formName="More Institute Details" />
-          
-          
-           <FormNavItem to="/application-process/subsection" iconClass={<FaDotCircle />} formName="Subsection-Model" />
-          
-          
-           <FormNavItem to="/application-process/organisation-details" iconClass={<FaDotCircle />} formName="Organisation Details" />
-          
-          
-           <FormNavItem to="/application-process/trustee-details" iconClass={<FaDotCircle />} formName="Trustee Details" />
-          
-          
-           <FormNavItem to="/application-process/contact-person-details" iconClass={<FaDotCircle />} formName="Contact Person Details" />
-          
-          
-           <FormNavItem to="/application-process/questionnaire" iconClass={<FaDotCircle />} formName="Questionnaire" />
-          
-          
-           <FormNavItem to="/application-process/program-details" iconClass={<FaDotCircle />} formName="Program Details" />
-          
-          
-           <FormNavItem to="/application-process/course-details" iconClass={<FaDotCircle />} formName="Course Details" />
-          
-          
-           <FormNavItem to="/application-process/land-details" iconClass={<FaDotCircle />} formName="Land Details" />
-          
-          
-           <FormNavItem to="/application-process/more-land-details" iconClass={<FaDotCircle />} formName="More Land Details" />
-          
-          
-           <FormNavItem to="/application-process/building-details" iconClass={<FaDotCircle />} formName="Building Details" />
-          
-          
-           <FormNavItem to="/application-process/more-building-details" iconClass={<FaDotCircle />} formName="More Building Details" />
-          
-          
-           <FormNavItem to="/application-process/laboratory-details" iconClass={<FaDotCircle />} formName="Laboratory Details" />
-          
-          
-           <FormNavItem to="/application-process/administrativeArea-details" iconClass={<FaDotCircle />} formName="Administrative Area Details" />
-          
-          
-           <FormNavItem to="/application-process/amenititesArea-details" iconClass={<FaDotCircle />} formName="Amenitites Area Details" />
-          
-          
-           <FormNavItem to="/application-process/circulationArea-details" iconClass={<FaDotCircle />} formName="Circulation Area Details" />
-          
-          
-           <FormNavItem to="/application-process/instructionalArea-details" iconClass={<FaDotCircle />} formName="Instructional Area Details" />
-          
-          
-           <FormNavItem to="/application-process/infrastructuralArea-details" iconClass={<FaDotCircle />} formName="Infrastructural Area Details" />
-          
-          
-           <FormNavItem to="/application-process/hostelfacilities-details" iconClass={<FaDotCircle />} formName="Hostel Facilites Details" />
-          
-          
-           <FormNavItem to="/application-process/computationalfacilities-details" iconClass={<FaDotCircle />} formName="Computational Facilities Details" />
-          
-          
-          {/* Add more links for other forms */}
-        </ul>
-      </nav>
-    )}
 
-      {/* Content Area */}
-      <div className="container mx-auto mt-8">
-        <Outlet />
+        {/* Header Bar */}
+        {!showIntroduction && (
+
+          <nav className="bg-white p-4">
+            <ul className="flex">
+
+              <FormNavItem to="/application-process/institute-details" iconClass={<FaDotCircle />} formName="Institute Details" />
+
+
+              <FormNavItem to="/application-process/more-institute-details" iconClass={<FaDotCircle />} formName="More Institute Details" />
+
+
+              <FormNavItem to="/application-process/subsection" iconClass={<FaDotCircle />} formName="Subsection-Model" />
+
+
+              <FormNavItem to="/application-process/organisation-details" iconClass={<FaDotCircle />} formName="Organisation Details" />
+
+
+              <FormNavItem to="/application-process/trustee-details" iconClass={<FaDotCircle />} formName="Trustee Details" />
+
+
+              <FormNavItem to="/application-process/contact-person-details" iconClass={<FaDotCircle />} formName="Contact Person Details" />
+
+
+              <FormNavItem to="/application-process/questionnaire" iconClass={<FaDotCircle />} formName="Questionnaire" />
+
+
+              <FormNavItem to="/application-process/program-details" iconClass={<FaDotCircle />} formName="Program Details" />
+
+
+              <FormNavItem to="/application-process/course-details" iconClass={<FaDotCircle />} formName="Course Details" />
+
+
+              <FormNavItem to="/application-process/land-details" iconClass={<FaDotCircle />} formName="Land Details" />
+
+
+              <FormNavItem to="/application-process/more-land-details" iconClass={<FaDotCircle />} formName="More Land Details" />
+
+
+              <FormNavItem to="/application-process/building-details" iconClass={<FaDotCircle />} formName="Building Details" />
+
+
+              <FormNavItem to="/application-process/more-building-details" iconClass={<FaDotCircle />} formName="More Building Details" />
+
+
+              <FormNavItem to="/application-process/laboratory-details" iconClass={<FaDotCircle />} formName="Laboratory Details" />
+
+
+              <FormNavItem to="/application-process/administrativeArea-details" iconClass={<FaDotCircle />} formName="Administrative Area Details" />
+
+
+              <FormNavItem to="/application-process/amenititesArea-details" iconClass={<FaDotCircle />} formName="Amenitites Area Details" />
+
+
+              <FormNavItem to="/application-process/circulationArea-details" iconClass={<FaDotCircle />} formName="Circulation Area Details" />
+
+
+              <FormNavItem to="/application-process/instructionalArea-details" iconClass={<FaDotCircle />} formName="Instructional Area Details" />
+
+
+              <FormNavItem to="/application-process/infrastructuralArea-details" iconClass={<FaDotCircle />} formName="Infrastructural Area Details" />
+
+
+              <FormNavItem to="/application-process/hostelfacilities-details" iconClass={<FaDotCircle />} formName="Hostel Facilites Details" />
+
+
+              <FormNavItem to="/application-process/computationalfacilities-details" iconClass={<FaDotCircle />} formName="Computational Facilities Details" />
+
+
+              {/* Add more links for other forms */}
+            </ul>
+          </nav>
+        )}
+
+        {/* Content Area */}
+        <div className="container mx-auto mt-8">
+          <Outlet />
+        </div>
       </div>
+
+
+    <div className={`flex flex-cols bg-neutral-900 ${open ? 'w-72': 'w-16'} duration-500 p-3 text-white`}>
+        {/* <RightSideBar /> */}
+        <section className='flex gap-6'>
+          <div className={`bg-[#0e0e0e] min-h-screen w-16 text-gray-100`}>
+            <div className='py-3 flex'>
+              <HiMenuAlt2 
+              size={24} 
+              className='cursor-pointer ml-2' 
+              onClick={() => setOpen(!open)}/>
+            </div>
+            <div className='absolute mt-4 flex flex-col gap-4 h-full items-center'>
+              <div className='flex-1 flex items-center'>
+              <div className='w-full'><h2>Chatbot</h2></div>
+              </div>
+              <div className='flex-1 flex items-center'>
+              <div className='w-full'>
+                <QueryResolver />
+              </div>
+              </div>
+             
+            </div>
+          </div>
+        </section>
     </div>
+    </div>
+    </>
   );
 };
 

@@ -31,9 +31,25 @@ const LandDetailsForm = () => {
     }));
   };
 
+  const handleDeficiency = () => {
+    if(formData.totalAreaInAcres < 7.5){
+      alert("Area Land in total should be more than 7.5 acres");
+      return true;
+    }
+    else if(formData.numberOfPieces > 1){
+      alert("Maximum number of Pieces must not exceed 1");
+      return true;
+    }
+    return false;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
+    const hasDeficiency = handleDeficiency();
+    if(hasDeficiency){
+      return;
+    }
     console.log(formData);
   };
 

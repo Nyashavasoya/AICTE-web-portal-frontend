@@ -23,6 +23,34 @@ const ComputationalFacilitiesForm = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const handleDeficiency = () => {
+    if(formData.internetBandwidthInMbps < 200){
+        alert('Internet bandwidth should be at least 200 Mbps');
+        return true;
+    }
+    else if(formData.printersAvailableToStudents < 51){
+        alert("Number of available printers to students should be more than or equal to 50");
+        return true;
+    }
+    else if(formData.numberOfPcInLanguageLab < 20){
+        alert("The number of personal computers in the language lab should not be less than 20.");
+        return true;
+    }
+    else if(formData.numberOfA1SizeColorPrinter < 0){
+        alert("Invalid input for A1 size color printers.")
+        return true;
+    }
+    else if(formData.numberOfLegalApplicationSoftware < 20){
+        alert("At least 20 software applications are required for legal studies.")
+        return true;
+    }
+    else if(formData.numberOfLegalSystemSoftware < 3){
+        alert("At least three system-level software packages are needed for a complete legal environment.")
+        return true;
+    }
+    
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your logic for form submission or API call here

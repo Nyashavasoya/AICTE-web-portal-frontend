@@ -26,14 +26,52 @@ const AmenitiesAreaForm = () => {
     }));
   };
   
+  const handleDeficiency = () => {
+    if(formData.roomType === 'Boys Common Room'){
+        if(formData.area < 75){
+            alert('The common room should be at least 75 square meters');
+            return true;
+        }
+    }
+    else if(formData.roomType === 'Girls Common Room'){
+        if(formData.area < 75){
+            alert("It is not allowed to have a girls' common room smaller than 120 square meters");
+            return true;
+        }
+    }
+    else if(formData.roomType === 'Cafeteria'){
+        if(formData.area < 150){
+            alert('The cafeteria should be at least 150 square meters');
+            return true;
+        }
+    }
+    else if(formData.roomType === 'Stationery Store'){
+        if(formData.area < 10){
+            alert('The stationery store should occupy at least one square meter');
+            return true;
+        }
+    }
+    else if(formData.roomType === 'First aid cum sick Room'){
+        if(formData.area < 10){
+            alert('The first aid cum sick room should occupy at least one square meter');
+            return true;
+        }
+    }
+    return false;
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your logic for form submission or API call here
+    const hasDeficiency = handleDeficiency();
+    if(hasDeficiency){
+        return;
+    }
     console.log('Form submitted:', formData);
   };
 
   return (
+
     <div className="container mx-auto mt-8">
       <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
         <div className="mb-4">
@@ -51,18 +89,24 @@ const AmenitiesAreaForm = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="roomType" className="block text-sm font-medium text-gray-600">
-            Room Type
-          </label>
-          <input
-            type="text"
-            id="roomType"
-            name="roomType"
-            value={formData.roomType}
-            onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
-          />
-        </div>
+  <label htmlFor="roomType" className="block text-sm font-medium text-gray-600">
+    Room Type
+  </label>
+  <select
+    id="roomType"
+    name="roomType"
+    value={formData.roomType}
+    onChange={handleChange}
+    className="mt-1 p-2 w-full border rounded-md"
+  >
+    <option value="Boys Common Room">Boys Common Room</option>
+    <option value="Girls Common Room">Girls Common Room</option>
+    <option value="Cafeteria">Cafeteria</option>
+    <option value="Stationery Store">Stationery Store</option>
+    <option value="First aid cum sick Room">First aid cum sick Room</option>
+    {/* Add more options as needed */}
+  </select>
+</div>
 
         <div className="mb-4">
           <label htmlFor="area" className="block text-sm font-medium text-gray-600">
