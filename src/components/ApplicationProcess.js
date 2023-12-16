@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ApplicationProcess = () => {
+
+  const navigate =useNavigate();
+
   const [formData, setFormData] = useState({});
 
   const handleCheckboxChange = (question, value) => {
@@ -11,8 +15,7 @@ const ApplicationProcess = () => {
   };
 
   const handleValidateAndSubmit = () => {
-    // Implement your validation logic and backend submission here
-    console.log('Form Data:', formData);
+    navigate('/institute-details');
   };
 
   const questions = [

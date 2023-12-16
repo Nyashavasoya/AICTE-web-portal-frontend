@@ -4,14 +4,25 @@ import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
   const [instituteName, setInstituteName] = useState('');
-  const [cpFirstName, setCpFirstName] = useState('');
-  const [cpLastName, setCpLastName] = useState('');
-  const [cpDesignation, setCpDesignation] = useState('');
-  const [cpNumber, setCpNumber] = useState('');
-  const [cpEmail, setCpEmail] = useState('');
   const [confirmEmail, setConfirmEmail] = useState();
-  const [address, setAddress] = useState('');
   const [acceptTerms, setAcceptTerms] = useState(false);
+  const [contactPersonData, setContactPersonData] = useState({
+    cpFirstName: '',
+    cpLastName: '',
+    cpDesignation: '',
+    cpNumber: '',
+    cpEmail: '',
+    address: ''
+  });
+
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setContactPersonData({
+      ...contactPersonData,
+       [name]: value,
+      });
+  }
 
   const navigate = useNavigate();
 
@@ -24,10 +35,11 @@ const Registration = () => {
   };
 
   const emailIdHandler = (confirmEmail) => {
-    if(confirmEmail === setCpEmail){
+    if(confirmEmail === contactPersonData.cpEmail){
       setConfirmEmail(confirmEmail);
     }
     else{
+      setConfirmEmail("");
       alert("Wrong email");
     }
   }
@@ -46,7 +58,7 @@ const Registration = () => {
             id="instituteName"
             className="mt-1 p-2 border rounded w-full"
             value={instituteName}
-            onChange={(e) => setInstituteName(e.target.value)}
+            onChange={e => setInstituteName(e.target.value)}
           />
         </div>
 
@@ -58,8 +70,9 @@ const Registration = () => {
             type="text"
             id="cp-fname"
             className="mt-1 p-2 border rounded w-full"
-            value={cpFirstName}
-            onChange={(e) => setCpFirstName(e.target.value)}
+            value={contactPersonData.cpFirstName}
+            name='cpFirstName'
+            onChange={handleChange}
           />
         </div>
 
@@ -71,8 +84,9 @@ const Registration = () => {
             type="text"
             id="cp-lname"
             className="mt-1 p-2 border rounded w-full"
-            value={cpLastName}
-            onChange={(e) => setCpLastName(e.target.value)}
+            value={contactPersonData.cpLastName}
+            name='cpLastName'
+            onChange={handleChange}
           />
         </div>
 
@@ -84,8 +98,9 @@ const Registration = () => {
             type="text"
             id="cp-designation"
             className="mt-1 p-2 border rounded w-full"
-            value={cpDesignation}
-            onChange={(e) => setCpDesignation(e.target.value)}
+            value={contactPersonData.cpDesignation}
+            name='cpDesignation'
+            onChange={handleChange}
           />
         </div>
 
@@ -97,8 +112,9 @@ const Registration = () => {
             id="address"
             rows="3"
             className="mt-1 p-2 border rounded w-full"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
+            value={contactPersonData.address}
+            name='address'
+            onChange={handleChange}
           ></textarea>
         </div>
 
@@ -110,8 +126,9 @@ const Registration = () => {
             type="text"
             id="cp-email"
             className="mt-1 p-2 border rounded w-full"
-            value={cpEmail}
-            onChange={(e) => setCpEmail(e.target.value)}
+            value={contactPersonData.cpEmail}
+            name='cpEmail'
+            onChange={handleChange}
           />
         </div>
 
@@ -136,8 +153,9 @@ const Registration = () => {
             type="text"
             id="cp-number"
             className="mt-1 p-2 border rounded w-full"
-            value={cpNumber}
-            onChange={(e) => setCpNumber(e.target.value)}
+            value={contactPersonData.cpNumber}
+            name='cpNumber'
+            onChange={handleChange}
           />
         </div>
 
@@ -167,5 +185,3 @@ const Registration = () => {
 };
 
 export default Registration;
-
-
