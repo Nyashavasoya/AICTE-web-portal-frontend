@@ -4,17 +4,20 @@ import './AboutUs.css'; // Import your CSS file
 const AboutUs = () => {
   const words = ['Us', 'AICTE', 'Approvals'];
   const wordIndex = useRef(0);
+  const h1Ref = useRef(null)
 
   useEffect(() => {
     const typeWriter = async (text, fnCallback) => {
-      const h1 = document.querySelector('.typewriter h1');
-      for (let i = 0; i <= text.length; i++) {
-        h1.innerHTML = text.substring(0, i) + '<span class="cursor" aria-hidden="true"></span>';
-        await new Promise(resolve => setTimeout(resolve, 100));
-      }
-      if (typeof fnCallback === 'function') {
-        await new Promise(resolve => setTimeout(resolve, 700));
-        fnCallback();
+      const h1 = h1Ref.current;
+      if (h1) {
+        for (let i = 0; i <= text.length; i++) {
+          setTimeout(() => {
+            h1.innerHTML = text.substring(0, i) + '<span class="cursor" aria-hidden="true"></span>';
+            if (i === text.length && typeof fnCallback === 'function') {
+              setTimeout(fnCallback, 700);
+            }
+          }, i * 100);
+        }
       }
     };
 
@@ -44,7 +47,7 @@ const AboutUs = () => {
           <h1>About</h1>
           <div className="text-2xl"><br/></div>
           <div className="typewriter p-8 text-indigo-500 text-8xl">
-            <h1></h1>
+            <h1 ref={h1Ref} className='typewriter-text'></h1>
           </div>
         </div>
 
