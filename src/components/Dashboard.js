@@ -1,10 +1,23 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
+import { useState, useEffect } from 'react';
+import { useRecoilValue } from 'recoil';
+import { formsFilledState } from '../pages/atoms'; // Adjust the import path
 
 
 const Dashboard = () => {
 
-  const progress = 40;
+  const formsFilled = useRecoilValue(formsFilledState);
+  const [progress, setProgress] = useState(0);
+
+  // const progress = 40;
+
+  useEffect(() => {
+    // Calculate progress when formsFilled state changes
+    const totalForms = 21;
+    const newProgress = (formsFilled / totalForms) * 100;
+    setProgress(newProgress);
+  }, [formsFilled]);
 
   const data = {
     labels: ['Progress', 'Remaining'],

@@ -1,8 +1,11 @@
 // ComputationalFacilitiesForm.js
 
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const ComputationalFacilitiesForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     PClaptopsExclusivelyAvailableToStudents: 0,
     PClaptopsAvailableInLibrary: 0,
@@ -59,6 +62,7 @@ const ComputationalFacilitiesForm = () => {
         return;
     }
     console.log('Form submitted:', formData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const ProgramDetailsForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     programme: '',
     anyOtherNewProgram: '',
@@ -21,6 +24,7 @@ const ProgramDetailsForm = () => {
     e.preventDefault();
     const updatedData = [...submittedData, formData];
     setSubmittedData(updatedData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

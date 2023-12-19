@@ -49,6 +49,7 @@ function LandingPage() {
         <TextSlider />
         <AboutUs />
         <Services />
+        {/* <FAQs/> */}
       </div>
       <div style={{ backgroundColor: '#f1efed' }} className="w-full h-screen"></div>
     </div>
