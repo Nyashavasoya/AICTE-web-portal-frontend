@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { statesData } from '../lib/states-districts';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
+
 
 const InstituteForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     name: '',
     yearOfEstablishment: '',
@@ -38,6 +42,7 @@ const InstituteForm = () => {
         alert('Please enter a valid email');
         return;
         }
+        setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

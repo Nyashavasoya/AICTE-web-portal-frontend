@@ -2,8 +2,6 @@ import { MdSpaceDashboard, MdSettingsApplications, MdOutlinePayment} from 'react
 import { IoIosLogOut } from "react-icons/io";
 import { IoDocumentOutline } from "react-icons/io5";
 import { CiChat2, CiStickyNote } from "react-icons/ci";
-import { GiProgression } from "react-icons/gi";
-import { SlCalender } from "react-icons/sl";
 import {HiOutlineCog, HiOutlineQuestionMarkCircle} from 'react-icons/hi';
 
 export const DASHBOARD_SIDEBAR_LINKS = [
@@ -36,25 +34,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
 		label: 'Payment',
 		path: '/payment',
 		icon: <MdOutlinePayment />
-	},
-	{
-		key: 'progressTracker',
-		label: 'Progress-Tracker',
-		path: '/progress-tracker',
-		icon: <GiProgression />
-	},
-    {
-        key: 'note',
-        label: 'Notice',
-        path: '/notice',
-        icon: <CiStickyNote />
-    },
-    {
-        key: 'calender',
-        label: 'Calender',
-        path: '/calender',
-        icon: <SlCalender />
-    }
+	}
 ]
 
 export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [

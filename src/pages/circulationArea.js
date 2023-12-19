@@ -1,8 +1,11 @@
 // CirculationAreaForm.js
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 import React, { useState } from 'react';
 
 const CirculationAreaForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     areaType: '',
     averageCarpetArea: 0,
@@ -23,6 +26,7 @@ const CirculationAreaForm = () => {
     e.preventDefault();
     // Add your logic for form submission or API call here
     console.log('Form submitted:', formData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

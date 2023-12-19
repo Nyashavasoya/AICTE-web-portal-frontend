@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const Questionnaire = () => {
 
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const navigate =useNavigate();
 
   const [formData, setFormData] = useState({});
@@ -16,6 +19,7 @@ const Questionnaire = () => {
 
   const handleValidateAndSubmit = (e) => {
     e.preventDefault();
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   const questions = [

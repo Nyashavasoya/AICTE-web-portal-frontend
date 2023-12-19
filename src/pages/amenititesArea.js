@@ -1,8 +1,11 @@
 // AmenitiesAreaForm.js
 
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const AmenitiesAreaForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     roomID: '',
     roomType: '',
@@ -68,6 +71,7 @@ const AmenitiesAreaForm = () => {
         return;
     }
     console.log('Form submitted:', formData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

@@ -1,8 +1,12 @@
 // AdministrativeAreaForm.js
 
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const AdministrativeAreaForm = () => {
+
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     roomID: '',
     roomType: '',
@@ -115,6 +119,7 @@ const AdministrativeAreaForm = () => {
     if(hasDeficiency){
         return;
     }
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (
