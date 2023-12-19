@@ -38,7 +38,7 @@ import TextSlider from './components/TextSlider';
 import AboutUs from './components/AboutUs';
 import FAQs from './components/FAQs';
 import Footer from './components/Footer';
-
+import ElgibilityChecker from './components/EligibilityChecker';
 function LandingPage() {
 
   return (
@@ -73,6 +73,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/eligibility" element={<ElgibilityChecker />} />
         <Route path="/" element={<LandingPage />} />
         
             <Route path="homePage" element={<HomePage />} />

@@ -133,6 +133,7 @@ const ApplicationProcess = () => {
 
         {/* Content Area */}
         <div className="container mx-auto mt-8">
+          <h1>SOham</h1>
           <Outlet />
         </div>
       </div>
