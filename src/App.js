@@ -5,9 +5,6 @@ import ApplicationProcess from './components/ApplicationProcess';
 import ChatBot from './components/ChatBot';
 import MyDocs from './components/MyDocs';
 import Payments from './components/Payments';
-import ProgressTracker from './components/ProgressTracker';
-import Notice from './components/Notice';
-import Calender from './components/Calender';
 import Logout from './components/Logout';
 import LoginPage from './pages/LoginPage';
 import Registration from './pages/Registraton';
@@ -96,9 +93,6 @@ function App() {
             <Route path="land-details" element={<LandDetailsForm />} />
             <Route path="my-documents" element={<MyDocs />} />
             <Route path="payment" element={<Payments />} />
-            <Route path="progress-tracker" element={<ProgressTracker />} />
-            <Route path="notice" element={<Notice />} />
-            <Route path="calender" element={<Calender />} />
             <Route path="logout" element={<Logout onLogout={handleLogout} />} />
           </Route>
             <Route path="/chatbot" element={<ChatBot />} >
