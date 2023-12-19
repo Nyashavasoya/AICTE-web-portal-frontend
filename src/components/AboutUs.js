@@ -1,10 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AboutUs.css'; // Import your CSS file
+import Services from './Services';
 
 const AboutUs = () => {
   const words = ['Us', 'AICTE', 'Approvals'];
   const wordIndex = useRef(0);
   const h1Ref = useRef(null);
+   const [hoveredService, setHoveredService] = useState(null);
+
+  const services = [
+    { title: 'Personalized Document Templates', description: 'The portal dynamically generates personalized, prefilled document templates, minimizing user effort and reducing errors. ' },
+    { title: 'Handbook Assistant', description: 'Chatbot for dynamic and personalized user interaction. ' },
+    { title: 'Fee Structure Generation', description: 'Customized fee structure document generated based on user preferences.' },
+  ];
 
   useEffect(() => {
     const typeWriter = async (text, fnCallback) => {
@@ -41,27 +49,22 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="container mx-auto my-8 px-4 lg:px-8 py-8 bg-gray-100">
-      <div className="typewriter-container flex">
-        {/* Combined div for "About" text and typewriter effect */}
-        <div className="p-8 text-indigo-500 text-8xl">
-          <h1>About</h1>
-          <div className="typewriter p-8 text-indigo-500 text-8xl">
-            <h1 ref={h1Ref} className="typewriter-text"></h1>
-          </div>
-        </div>
-
-        {/* Right side container with text */}
-        <div className="right-container text-2xl absolute top-21 right-8 w-1/3 text-right ">
-          <p>
-            All India Council for Technical Education (AICTE) was set up in November 1945 as a
-            national-level Apex Advisory Body to conduct a survey on the facilities available for
-            technical education and to promote development in the country in a coordinated and
-            integrated manner.
-          </p>
+    <div className="container mx-auto my-8 px-4 lg:px-8 py-8" style={{ backgroundColor: '#f1efed' }}>
+    <div className="typewriter-container flex">
+      {/* Combined div for "About" text and typewriter effect */}
+      <div className="p-8 text-8xl">
+        <h1 style={{ color: '#0F6FFF', fontWeight: 'bold' }}>About</h1>
+        <div className="typewriter text-8xl">
+          <h1 ref={h1Ref} className="typewriter-text" style={{ color: '#0F6FFF',  }}></h1>
         </div>
       </div>
+
+      {/* Right side container with text */}
+      <div className="right-container text-2xl absolute top-21 right-8 w-1/2 text-right">
+        <Services/>
+      </div>
     </div>
+  </div>
   );
 };
 

@@ -38,7 +38,7 @@ const Slideshow = () => {
 
   return (
    
-    <div className="slideshow-container w-full h-[60vh] overflow-hidden relative">
+    <div className="slideshow-container w-full h-[72vh] overflow-hidden relative">
       {slides.map((img, index) => (
         <div
           key={index}

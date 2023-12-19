@@ -36,22 +36,27 @@ import Header from './components/Header';
 import Slideshow from './components/Slideshow';
 import TextSlider from './components/TextSlider';
 import AboutUs from './components/AboutUs';
-import Services from './components/Services';
-
+import FAQs from './components/FAQs';
+import Footer from './components/Footer';
 
 function LandingPage() {
 
   return (
-    <div className="App">
+    <div className="App " style={{ backgroundColor: '#f1efed' }}>
       <Header />
       <div className="relative mt-20">
         <Slideshow />
         <TextSlider />
-        <AboutUs />
-        <Services />
-        {/* <FAQs/> */}
+        <div id='about'>
+        <AboutUs /><br/><br/><br/><br/><br/><br/>
+        </div>
+        <div id='FAQs'>
+        <FAQs/>
+        </div>
+        <div style={{ backgroundColor: '#f1efed' }}></div>
+        <Footer/>
       </div>
-      <div style={{ backgroundColor: '#f1efed' }} className="w-full h-screen"></div>
+      
     </div>
   );
 }
@@ -85,9 +90,6 @@ function App() {
             <Route path="land-details" element={<LandDetailsForm />} />
             <Route path="my-documents" element={<MyDocs />} />
             <Route path="payment" element={<Payments />} />
-            <Route path="progress-tracker" element={<ProgressTracker />} />
-            <Route path="notice" element={<Notice />} />
-            <Route path="calender" element={<Calender />} />
             <Route path="logout" element={<Logout  />} />
           </Route>
             <Route path="/chatbot" element={<ChatBot />} >

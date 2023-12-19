@@ -36,12 +36,4 @@ h1 {
     }
   }
   
-  .right-container {
-    flex: 1;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
   
