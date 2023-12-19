@@ -25,6 +25,7 @@ const Header = () => {
         <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
           <img src={logoImage} alt="Logo" className='w-55 h-16' />
         </div>
+        
         {/* Menu icon */}
         <div onClick={() => setOpen(!open)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
           {

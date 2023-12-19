@@ -19,6 +19,7 @@ export default function Tryout() {
         document.body.appendChild(addScript);
         window.googleTranslateElementInit = googleTranslateElementInit;
       }, [])
+      
   return (
     <div>
         <div id="google_translate_element"></div>

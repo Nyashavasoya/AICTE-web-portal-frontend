@@ -44,7 +44,6 @@ import Services from './Services';
 
 function LandingPage() {
 
-
   return (
     <div className="App">
       <Header />
@@ -95,7 +94,6 @@ function App() {
             <Route path="contact-person-details" element={<ContactPersonForm />} />
             <Route path="trustee-details" element={<TrusteeDetailsForm />} />
             <Route path="land-details" element={<LandDetailsForm />} />
-            <Route path="chatbot" element={<ChatBot />} />
             <Route path="my-documents" element={<MyDocs />} />
             <Route path="payment" element={<Payments />} />
             <Route path="progress-tracker" element={<ProgressTracker />} />
@@ -103,6 +101,7 @@ function App() {
             <Route path="calender" element={<Calender />} />
             <Route path="logout" element={<Logout onLogout={handleLogout} />} />
             </Route>
+            <Route path="/chatbot" element={<ChatBot />} ></Route>
             <Route path="/application-process" element={<ApplicationProcess />} >
               <Route path="institute-details" element={<InstituteDetails />}/>
               <Route path="more-institute-details" element={<InstituteForm />}/>

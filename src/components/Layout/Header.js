@@ -36,6 +36,7 @@ const Header = () => {
   return (
     <div className='bg-white h-16 px-4 flex justify-between items-center'>
     {/* <div id="google_translate_element"></div> */}
+    <div></div>
     <div className='flex flex-cols gap-5 mr-2 items-center'>
     <Popover className="relative">
         {({ open }) => (
