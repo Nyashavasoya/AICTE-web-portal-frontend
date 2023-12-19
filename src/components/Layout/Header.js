@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { HiOutlineChatAlt, HiOutlineBell } from 'react-icons/hi';
 import { Popover, Transition, Menu } from '@headlessui/react';
 import { Fragment } from 'react';
@@ -6,13 +6,36 @@ import classNames from 'classnames';
 import { CgProfile } from "react-icons/cg";
 import { useNavigate } from 'react-router-dom';
 
+
 const Header = () => {
+
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  //   script.async = true;
+  //   document.head.appendChild(script);
+
+  //   window.googleTranslateElementInit = () => {
+  //     new window.google.translate.TranslateElement(
+  //       {
+  //         pageLanguage: 'en',
+  //         autoDisplay: false,
+  //       },
+  //       'google_translate_element'
+  //     );
+  //   };
+
+  //   return () => {
+  //     document.head.removeChild(script);
+  //     delete window.googleTranslateElementInit;
+  //   };
+  // }, []);
 
     const navigate = useNavigate();
 
   return (
     <div className='bg-white h-16 px-4 flex justify-between items-center'>
-    <div></div>
+    {/* <div id="google_translate_element"></div> */}
     <div className='flex flex-cols gap-5 mr-2 items-center'>
     <Popover className="relative">
         {({ open }) => (
@@ -125,7 +148,7 @@ const Header = () => {
               </Menu.Items>
             </Transition>
     </Menu>
-        
+  
       </div>
     </div>
   )

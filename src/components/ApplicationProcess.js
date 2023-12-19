@@ -5,7 +5,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { FaDotCircle } from "react-icons/fa";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { HiMenuAlt2 } from 'react-icons/hi';
+import { IoMdMenu } from "react-icons/io";
 import QueryResolver from './QueryResolver';
 
 const FormNavItem = ({ to, iconClass, formName }) => {
@@ -136,19 +136,19 @@ const ApplicationProcess = () => {
       </div>
 
 
-    <div className={`flex flex-cols bg-neutral-900 ${open ? 'w-72': 'w-16'} duration-500 p-3 text-white`}>
+    <div className={`flex flex-cols bg-white ${open ? 'w-72': 'w-10'} duration-500 p-3 text-white`}>
         {/* <RightSideBar /> */}
         <section className='flex gap-6'>
-          <div className={`bg-[#0e0e0e] min-h-screen w-16 text-gray-100`}>
+          <div className={`bg-white min-h-screen w-16 text-gray-800`}>
             <div className='py-3 flex'>
-              <HiMenuAlt2 
+              <IoMdMenu 
               size={24} 
               className='cursor-pointer ml-2' 
               onClick={() => setOpen(!open)}/>
             </div>
             <div className='absolute mt-4 flex flex-col gap-4 h-full items-center'>
               <div className='flex-1 flex items-center'>
-              <div className='w-full'><h2>Chatbot</h2></div>
+              <div className='w-full'><h2></h2></div>
               </div>
               <div className='flex-1 flex items-center'>
               <div className='w-full'>

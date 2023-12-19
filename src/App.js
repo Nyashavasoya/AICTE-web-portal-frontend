@@ -35,8 +35,35 @@ import InstructionalAreaForm from './pages/instructionalArea';
 import InfrastructuralAreaForm from './pages/infrastructuralArea';
 import HostelFacilitiesForm from './pages/hostelAmenitites';
 import ComputationalFacilitiesForm from './pages/computationalFacilities';
+import Header from './components/Header';
+import Slideshow from './components/Slideshow';
+import TextSlider from './components/TextSlider';
+import AboutUs from './AboutUs';
+import Services from './Services';
+
+
+function LandingPage() {
+
+
+  return (
+    <div className="App">
+      <Header />
+      <div className="relative mt-20">
+        <Slideshow />
+        <TextSlider />
+        <AboutUs />
+        <Services />
+      </div>
+      <div style={{ backgroundColor: '#f1efed' }} className="w-full h-screen"></div>
+    </div>
+  );
+}
+
+
 
 function App() {
+
+  
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
@@ -50,9 +77,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={isLoggedIn ? <Layout /> : <HomePage />} />
+        <Route path="/" element={isLoggedIn ? <Layout /> : <LandingPage />} />
         {!isLoggedIn && (
           <>
+            <Route path="homePage" element={<HomePage />} />
             <Route path="loginPage" element={<LoginPage onLogin={handleLogin} />} />
             <Route path="registerPage" element={<Registration />} />
             <Route path="payment-process" element={<PaymentProcess />} />
