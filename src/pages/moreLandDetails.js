@@ -56,7 +56,7 @@ const MoreLandInformationForm = () => {
 
         {/* Area of Land */}
         <div>
-          <label htmlFor="areaOfLand">Area of Land:</label>
+          <label htmlFor="areaOfLand">Area of Land(in sq meters):</label>
           <input
             type="text"
             id="areaOfLand"

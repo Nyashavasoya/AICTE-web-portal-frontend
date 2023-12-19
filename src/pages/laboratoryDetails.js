@@ -28,11 +28,12 @@ const LaboratoryDetailsForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
+      <h2 className="text-3xl font-bold mb-4">Laboratory Details</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
         {/* Programme */}
         <div>
-          <label htmlFor="Programme">Programme:</label>
+          <label htmlFor="Programme" className="block text-gray-800 text-sm font-medium mb-2">Programme:</label>
           <select
             id="Programme"
             name="Programme"
@@ -48,7 +49,7 @@ const LaboratoryDetailsForm = () => {
 
         {/* Department */}
         <div>
-          <label htmlFor="department">Department:</label>
+          <label htmlFor="department" className="block text-gray-800 text-sm font-medium mb-2">Department:</label>
           <select
             id="department"
             name="department"
@@ -64,7 +65,7 @@ const LaboratoryDetailsForm = () => {
 
         {/* Course */}
         <div>
-          <label htmlFor="Course">Course:</label>
+          <label htmlFor="Course" className="block text-gray-800 text-sm font-medium mb-2">Course:</label>
           <select
             id="Course"
             name="Course"
@@ -80,7 +81,7 @@ const LaboratoryDetailsForm = () => {
 
         {/* Level */}
         <div>
-          <label htmlFor="Level">Level:</label>
+          <label htmlFor="Level" className="block text-gray-800 text-sm font-medium mb-2">Level:</label>
           <select
             id="Level"
             name="Level"
@@ -96,7 +97,7 @@ const LaboratoryDetailsForm = () => {
 
         {/* Research Lab for PG Courses */}
         <div>
-          <label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">
             <input
               type="checkbox"
               id="isItResearchCabForPGCourses"
@@ -110,7 +111,7 @@ const LaboratoryDetailsForm = () => {
 
         {/* Name of the Laboratory */}
         <div>
-          <label htmlFor="nameOfTheLaboratory">Name of the Laboratory:</label>
+          <label htmlFor="nameOfTheLaboratory" className="block text-gray-800 text-sm font-medium mb-2">Name of the Laboratory:</label>
           <input
             type="text"
             id="nameOfTheLaboratory"
@@ -122,7 +123,7 @@ const LaboratoryDetailsForm = () => {
 
         {/* Lab Meyer Equipments */}
         <div>
-          <label htmlFor="lobMeyerEquipments">Lab Meyer Equipments:</label>
+          <label htmlFor="lobMeyerEquipments" className="block text-gray-800 text-sm font-medium mb-2">Lab Meyer Equipments:</label>
           <input
             type="text"
             id="lobMeyerEquipments"
@@ -134,7 +135,7 @@ const LaboratoryDetailsForm = () => {
 
         {/* Building Name */}
         <div>
-          <label htmlFor="buildingName">Building Name:</label>
+          <label htmlFor="buildingName" className="block text-gray-800 text-sm font-medium mb-2">Building Name:</label>
           <input
             type="text"
             id="buildingName"
@@ -146,7 +147,7 @@ const LaboratoryDetailsForm = () => {
 
         {/* Building Number */}
         <div>
-          <label htmlFor="buildingNumber">Building Number:</label>
+          <label htmlFor="buildingNumber" className="block text-gray-800 text-sm font-medium mb-2">Building Number:</label>
           <input
             type="number"
             id="buildingNumber"

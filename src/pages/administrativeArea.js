@@ -118,11 +118,12 @@ const AdministrativeAreaForm = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8">
-      <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
-        <div className="mb-4">
-          <label htmlFor="roomID" className="block text-sm font-medium text-gray-600">
-            Room ID
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
+      <h2 className='text-3xl font-bold mb-4'>Administration Area </h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="roomID" className="block text-gray-800 text-sm font-medium mb-2">
+            Room ID:
           </label>
           <input
             type="text"
@@ -130,20 +131,20 @@ const AdministrativeAreaForm = () => {
             name="roomID"
             value={formData.roomID}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-4">
-            <label htmlFor="roomType" className="block text-sm font-medium text-gray-600">
-                Room Type
+        <div>
+            <label htmlFor="roomType" className="block text-gray-800 text-sm font-medium mb-2">
+                Room Type:
             </label>
             <select
                 id="roomType"
                 name="roomType"
                 value={formData.roomType}
                 onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md"
+                className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
             >
                 <option value="Principal/Director Office">Principal/Director Office</option>
                 <option value="Board Room">Board Room</option>
@@ -161,9 +162,9 @@ const AdministrativeAreaForm = () => {
         </div>
 
 
-        <div className="mb-4">
-          <label htmlFor="area" className="block text-sm font-medium text-gray-600">
-            Area (in sq feet)
+        <div>
+          <label htmlFor="area" className="block text-gray-800 text-sm font-medium mb-2">
+            Area (in sq meters):
           </label>
           <input
             type="number"
@@ -171,13 +172,13 @@ const AdministrativeAreaForm = () => {
             name="area"
             value={formData.area}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="buildingName" className="block text-sm font-medium text-gray-600">
-            Building Name
+        <div>
+          <label htmlFor="buildingName" className="block text-gray-800 text-sm font-medium mb-2">
+            Building Name:
           </label>
           <input
             type="text"
@@ -185,13 +186,13 @@ const AdministrativeAreaForm = () => {
             name="buildingName"
             value={formData.buildingName}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="buildingNumber" className="block text-sm font-medium text-gray-600">
-            Building Number
+        <div>
+          <label htmlFor="buildingNumber" className="block text-gray-800 text-sm font-medium mb-2">
+            Building Number:
           </label>
           <input
             type="number"
@@ -199,13 +200,13 @@ const AdministrativeAreaForm = () => {
             name="buildingNumber"
             value={formData.buildingNumber}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="readinessofFlooring" className="block text-sm font-medium text-gray-600">
-            Readiness of Flooring
+        <div>
+          <label htmlFor="readinessofFlooring" className="block text-gray-800 text-sm font-medium mb-2">
+            Readiness of Flooring:
           </label>
           <input
             type="text"
@@ -213,13 +214,13 @@ const AdministrativeAreaForm = () => {
             name="readinessofFlooring"
             value={formData.readinessofFlooring}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="readinessofWallAndPainting" className="block text-sm font-medium text-gray-600">
-            Readiness of Wall and Painting
+        <div>
+          <label htmlFor="readinessofWallAndPainting" className="block text-gray-800 text-sm font-medium mb-2">
+            Readiness of Wall and Painting:
           </label>
           <input
             type="text"
@@ -227,13 +228,13 @@ const AdministrativeAreaForm = () => {
             name="readinessofWallAndPainting"
             value={formData.readinessofWallAndPainting}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="readinessofElectrificationAndLightning" className="block text-sm font-medium text-gray-600">
-            Readiness of Electrification and Lightning
+        <div>
+          <label htmlFor="readinessofElectrificationAndLightning" className="block text-gray-800 text-sm font-medium mb-2">
+            Readiness of Electrification and Lightning:
           </label>
           <input
             type="text"
@@ -241,13 +242,13 @@ const AdministrativeAreaForm = () => {
             name="readinessofElectrificationAndLightning"
             value={formData.readinessofElectrificationAndLightning}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="readinessofFurniture" className="block text-sm font-medium text-gray-600">
-            Readiness of Furniture
+        <div>
+          <label htmlFor="readinessofFurniture" className="block text-gray-800 text-sm font-medium mb-2">
+            Readiness of Furniture:
           </label>
           <input
             type="text"
@@ -255,14 +256,14 @@ const AdministrativeAreaForm = () => {
             name="readinessofFurniture"
             value={formData.readinessofFurniture}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         <div className="mt-4">
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300"
           >
             Submit
           </button>

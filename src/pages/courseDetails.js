@@ -34,15 +34,17 @@ const CourseDetailsForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
+      <h2 className="text-3xl font-bold mb-4">Course Details</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
         {/* Course Programme Dropdown */}
         <div>
-          <label>Select Programme:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Select Programme:</label>
           <select
             name="programme"
             value={formData.programme}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Programme</option>
             <option value="Programme1">Programme 1</option>
@@ -53,55 +55,60 @@ const CourseDetailsForm = () => {
 
         {/* Affiliating University */}
         <div>
-          <label>Affiliating University:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Affiliating University:</label>
           <input
             type="text"
             name="affiliatingUniversity"
             value={formData.affiliatingUniversity}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         {/* Department */}
         <div>
-          <label>Department:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Department:</label>
           <input
             type="text"
             name="department"
             value={formData.department}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         {/* Name of the Course */}
         <div>
-          <label>Name of the Course:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Name of the Course:</label>
           <input
             type="text"
             name="nameOfTheCourse"
             value={formData.nameOfTheCourse}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         {/* Duration */}
         <div>
-          <label>Duration (in years):</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Duration (in years):</label>
           <input
             type="text"
             name="duration"
             value={formData.duration}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         {/* Level of Course Dropdown */}
         <div>
-          <label>Select Level of Course:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Select Level of Course:</label>
           <select
             name="levelOfCourse"
             value={formData.levelOfCourse}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Level</option>
             <option value="Undergraduate">Undergraduate</option>
@@ -112,22 +119,24 @@ const CourseDetailsForm = () => {
 
         {/* Year Started */}
         <div>
-          <label>Year Started:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Year Started:</label>
           <input
             type="text"
             name="yearStarted"
             value={formData.yearStarted}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         {/* Shift Dropdown (only applicable when mode of conduct is regular) */}
         <div>
-          <label>Select Shift:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Select Shift:</label>
           <select
             name="shift"
             value={formData.shift}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Shift</option>
             <option value="Morning">Morning</option>
@@ -138,11 +147,12 @@ const CourseDetailsForm = () => {
 
         {/* Full-Time or Part-Time Dropdown */}
         <div>
-          <label>Select Full-Time or Part-Time:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Select Full-Time or Part-Time:</label>
           <select
             name="fullTimeorPartTime"
             value={formData.fullTimeorPartTime}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Option</option>
             <option value="Full-Time">Full-Time</option>
@@ -153,11 +163,12 @@ const CourseDetailsForm = () => {
 
         {/* Intake Applicable For Dropdown */}
         <div>
-          <label>Select Intake Applicable For:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Select Intake Applicable For:</label>
           <select
             name="intakeApplicableFor"
             value={formData.intakeApplicableFor}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Intake</option>
             <option value="2023">2023</option>
@@ -168,22 +179,24 @@ const CourseDetailsForm = () => {
 
         {/* Applying For */}
         <div>
-          <label>Applying For:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Applying For:</label>
           <input
             type="text"
             name="applyingFor"
             value={formData.applyingFor}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         {/* Mode of Conduct Dropdown */}
         <div>
-          <label>Select Mode of Conduct:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Select Mode of Conduct:</label>
           <select
             name="modeOFCounduct"
             value={formData.modeOFCounduct}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Mode of Conduct</option>
             <option value="Regular">Regular</option>
@@ -194,11 +207,12 @@ const CourseDetailsForm = () => {
 
         {/* Course Type Dropdown */}
         <div>
-          <label>Select Course Type:</label>
+          <label className="block text-gray-800 text-sm font-medium mb-2">Select Course Type:</label>
           <select
             name="courseType"
             value={formData.courseType}
             onChange={handleChange}
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Course Type</option>
             <option value="Type1">Type 1</option>

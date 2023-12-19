@@ -40,26 +40,26 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="container mx-auto my-8 px-4 lg:px-8 py-8 bg-gray-100">
-      <div className="typewriter-container flex">
-        {/* Left side (About Us) */}
-        <div className="p-8 text-indigo-500 text-8xl">
-          <h1>About</h1>
-          <div className="text-2xl"><br/></div>
-          <div className="typewriter p-8 text-indigo-500 text-8xl">
-            <h1 ref={h1Ref} className='typewriter-text'></h1>
+      <div className="container mx-auto my-8 px-4 lg:px-8 py-8 bg-gray-100">
+        <div className="typewriter-container flex">
+          {/* Left side (About Us) */}
+          <div className="p-8 text-indigo-500 text-8xl">
+            <h1>About</h1>
+            <div className="text-2xl"></div>
+            <div className="typewriter p-8 text-indigo-500 text-8xl">
+              <h1 ref={h1Ref} className='typewriter-text'></h1>
+            </div>
+          </div>
+  
+          {/* Right side container with text */}
+          <div className="right-container text-2xl flex-1 p-8">
+            <p>
+              All India Council for Technical Education (AICTE) was set up in November 1945 as a national-level Apex Advisory Body to conduct a survey on the facilities available for technical education and to promote development in the country in a coordinated and integrated manner.
+            </p>
           </div>
         </div>
-
-        {/* Right side container with text */}
-        <div className="right-container text-2xl absolute top-21 right-8 w-1/3 text-right ">
-          <p>
-            All India Council for Technical Education (AICTE) was set up in November 1945 as a national-level Apex Advisory Body to conduct a survey on the facilities available for technical education and to promote development in the country in a coordinated and integrated manner.
-          </p>
-        </div>
       </div>
-    </div>
-  );
-};
-
+    );
+  };
+  
 export default AboutUs;
