@@ -100,6 +100,8 @@ function App() {
             <Route path="notice" element={<Notice />} />
             <Route path="calender" element={<Calender />} />
             <Route path="logout" element={<Logout onLogout={handleLogout} />} />
+          </Route>
+            <Route path="/chatbot" element={<ChatBot />} >
             </Route>
             <Route path="/chatbot" element={<ChatBot />} ></Route>
             <Route path="/application-process" element={<ApplicationProcess />} >
