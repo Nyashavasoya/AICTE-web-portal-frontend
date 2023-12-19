@@ -36,121 +36,122 @@ const InstituteDetails = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
+      <h2 className="text-3xl font-bold mb-4">Institue Details</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="currentApplicationNumber">currentApplicationNumber</label>
+          <label htmlFor="currentApplicationNumber" className="block text-gray-800 text-sm font-medium mb-2">currentApplicationNumber</label>
           <input
             type="number"
             id="currentApplicationNumber"
             name="currentApplicationNumber"
             value={formData.currentApplicationNumber}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         <div>
-          <label htmlFor="applicationType">applicationType</label>
+          <label htmlFor="applicationType" className="block text-gray-800 text-sm font-medium mb-2">applicationType</label>
           <input
             type="number"
             id="applicationType"
             name="applicationType"
             value={formData.applicationType}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         <div>
-          <label htmlFor="currentStatus">currentStatus</label>
+          <label htmlFor="currentStatus" className="block text-gray-800 text-sm font-medium mb-2">currentStatus</label>
           <input
             type="number"
             id="currentStatus"
             name="currentStatus"
             value={formData.currentStatus}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         <div>
-          <label htmlFor="subStatus">subStatus</label>
+          <label htmlFor="subStatus" className="block text-gray-800 text-sm font-medium mb-2">subStatus</label>
           <input
             type="number"
             id="subStatus"
             name="subStatus"
             value={formData.subStatus}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         <div>
-          <label htmlFor="academicYear">academicYear</label>
+          <label htmlFor="academicYear" className="block text-gray-800 text-sm font-medium mb-2">academicYear</label>
           <input
             type="date"
             id="academicYear"
             name="academicYear"
             value={formData.academicYear}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
         <div>
-          <label htmlFor="applicationOpenedDate">applicationOpenedDate</label>
+          <label htmlFor="applicationOpenedDate" className="block text-gray-800 text-sm font-medium mb-2">applicationOpenedDate</label>
           <input
             type="date"
             id="applicationOpenedDate"
             name="applicationOpenedDate"
             value={formData.applicationOpenedDate}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         <div>
-          <label htmlFor="applicationSubmittedDate">applicationSubmittedDate</label>
+          <label htmlFor="applicationSubmittedDate" className="block text-gray-800 text-sm font-medium mb-2">applicationSubmittedDate</label>
           <input
             type="date"
             id="applicationSubmittedDate"
             name="applicationSubmittedDate"
             value={formData.applicationSubmittedDate}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
         <div>
-          <label htmlFor="reopenedApplicationDate">reopenedApplicationDate</label>
+          <label htmlFor="reopenedApplicationDate" className="block text-gray-800 text-sm font-medium mb-2">reopenedApplicationDate</label>
           <input
             type="date"
             id="reopenedApplicationDate"
             name="reopenedApplicationDate"
             value={formData.reopenedApplicationDate}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
         <div>
-          <label htmlFor="appealRequestDate">appealRequestDate</label>
+          <label htmlFor="appealRequestDate" className="block text-gray-800 text-sm font-medium mb-2">appealRequestDate</label>
           <input
             type="date"
             id="appealRequestDate"
             name="appealRequestDate"
             value={formData.appealRequestDate}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
         <div>
-          <label htmlFor="applicationDontReceived">applicationDontReceived</label>
+          <label htmlFor="applicationDontReceived" className="block text-gray-800 text-sm font-medium mb-2">applicationDontReceived</label>
           <input
             type="number"
             id="applicationDontReceived"
             name="applicationDontReceived"
             value={formData.applicationDontReceived}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 

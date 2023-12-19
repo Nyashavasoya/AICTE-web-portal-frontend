@@ -30,10 +30,11 @@ const CirculationAreaForm = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8">
-      <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
-        <div className="mb-4">
-          <label htmlFor="areaType" className="block text-sm font-medium text-gray-600">
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
+      <h2 className="text-3xl font-bold mb-4">Circulation Area</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="areaType" className="block text-gray-800 text-sm font-medium mb-2">
             Area Type
           </label>
           <select
@@ -41,7 +42,7 @@ const CirculationAreaForm = () => {
             name="areaType"
             value={formData.areaType}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Area Type</option>
             <option value="Type1">Type 1</option>
@@ -50,9 +51,9 @@ const CirculationAreaForm = () => {
           </select>
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="averageCarpetArea" className="block text-sm font-medium text-gray-600">
-            Average Carpet Area
+        <div>
+          <label htmlFor="averageCarpetArea" className="block text-gray-800 text-sm font-medium mb-2">
+            Average Carpet Area(in sq meters):
           </label>
           <input
             type="number"
@@ -60,12 +61,12 @@ const CirculationAreaForm = () => {
             name="averageCarpetArea"
             value={formData.averageCarpetArea}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="flooring" className="block text-sm font-medium text-gray-600">
+        <div>
+          <label htmlFor="flooring" className="block text-gray-800 text-sm font-medium mb-2">
             Flooring
           </label>
           <input
@@ -78,8 +79,8 @@ const CirculationAreaForm = () => {
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="paintingDone" className="block text-sm font-medium text-gray-600">
+        <div>
+          <label htmlFor="paintingDone" className="block text-gray-800 text-sm font-medium mb-2">
             Painting Done
           </label>
           <select
@@ -87,7 +88,7 @@ const CirculationAreaForm = () => {
             name="paintingDone"
             value={formData.paintingDone}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Painting Status</option>
             <option value="Ready">Ready</option>
@@ -95,10 +96,10 @@ const CirculationAreaForm = () => {
           </select>
         </div>
 
-        <div className="mb-4">
+        <div>
           <label
             htmlFor="electrificationAndLightning"
-            className="block text-sm font-medium text-gray-600"
+            className="block text-gray-800 text-sm font-medium mb-2"
           >
             Electrification and Lightning
           </label>
@@ -107,7 +108,7 @@ const CirculationAreaForm = () => {
             name="electrificationAndLightning"
             value={formData.electrificationAndLightning}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           >
             <option value="">Select Electrification Status</option>
             <option value="Ready">Ready</option>
@@ -115,8 +116,8 @@ const CirculationAreaForm = () => {
           </select>
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="buildingName" className="block text-sm font-medium text-gray-600">
+        <div>
+          <label htmlFor="buildingName" className="block text-gray-800 text-sm font-medium mb-2">
             Building Name
           </label>
           <input
@@ -125,12 +126,12 @@ const CirculationAreaForm = () => {
             name="buildingName"
             value={formData.buildingName}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="buildingNumber" className="block text-sm font-medium text-gray-600">
+        <div>
+          <label htmlFor="buildingNumber" className="block text-gray-800 text-sm font-medium mb-2">
             Building Number
           </label>
           <input
@@ -139,14 +140,14 @@ const CirculationAreaForm = () => {
             name="buildingNumber"
             value={formData.buildingNumber}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         <div className="mt-4">
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300"
           >
             Submit
           </button>
