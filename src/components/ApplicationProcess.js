@@ -134,32 +134,6 @@ const ApplicationProcess = () => {
           <Outlet />
         </div>
       </div>
-
-
-    <div className={`flex flex-cols bg-white ${open ? 'w-72': 'w-10'} duration-500 p-3 text-white`}>
-        {/* <RightSideBar /> */}
-        <section className='flex gap-6'>
-          <div className={`bg-white min-h-screen w-16 text-gray-800`}>
-            <div className='py-3 flex'>
-              <IoMdMenu 
-              size={24} 
-              className='cursor-pointer ml-2' 
-              onClick={() => setOpen(!open)}/>
-            </div>
-            <div className='absolute mt-4 flex flex-col gap-4 h-full items-center'>
-              <div className='flex-1 flex items-center'>
-              <div className='w-full'><h2></h2></div>
-              </div>
-              <div className='flex-1 flex items-center'>
-              <div className='w-full'>
-                <QueryResolver />
-              </div>
-              </div>
-             
-            </div>
-          </div>
-        </section>
-    </div>
     </div>
     </>
   );
