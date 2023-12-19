@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LoginPage = ({ onLogin }) => {
+const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = () => {
     if (username === 'user' && password === 'password') {
-      onLogin();
-      navigate('/');
+      navigate('/dashboard');
     } else {
       alert('Incorrect username or password');
     }

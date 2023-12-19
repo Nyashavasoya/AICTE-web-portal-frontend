@@ -8,7 +8,11 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
+    "axios": "^1.6.2",
+=======
     "chart.js": "^2.9.4",
+>>>>>>> 1eff20a75c900ed6dcfbcd9b5d664c550787fd3d
     "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-chartjs-2": "^2.11.2",

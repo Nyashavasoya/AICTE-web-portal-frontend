@@ -1,0 +1,47 @@
+/* ProgressTracker.css */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .progress-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%);
+  }
+  
+  .progress-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .progress-info {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .progress-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
