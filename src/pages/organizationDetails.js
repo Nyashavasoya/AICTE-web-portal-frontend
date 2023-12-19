@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { statesData } from '../lib/states-districts';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const OrganisationDetailsForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     nameOfInstitute: '',
     typeOfInstitute: '',
@@ -32,6 +35,7 @@ const OrganisationDetailsForm = () => {
     e.preventDefault();
     // Add your form submission logic here
     console.log('Form submitted:', formData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

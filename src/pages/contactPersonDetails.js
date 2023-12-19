@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { statesData } from '../lib/states-districts';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const ContactPersonForm = ({contactPersonData}) => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
 
   const navigate = useNavigate();
 
@@ -65,6 +68,7 @@ const ContactPersonForm = ({contactPersonData}) => {
       alert('Please enter valid alternate email address');
     }
 
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
 
   };
 

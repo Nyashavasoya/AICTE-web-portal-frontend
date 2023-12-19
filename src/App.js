@@ -5,9 +5,6 @@ import ApplicationProcess from './components/ApplicationProcess';
 import ChatBot from './components/ChatBot';
 import MyDocs from './components/MyDocs';
 import Payments from './components/Payments';
-import ProgressTracker from './components/ProgressTracker';
-import Notice from './components/Notice';
-import Calender from './components/Calender';
 import Logout from './components/Logout';
 import LoginPage from './pages/LoginPage';
 import Registration from './pages/Registraton';
@@ -38,8 +35,8 @@ import ComputationalFacilitiesForm from './pages/computationalFacilities';
 import Header from './components/Header';
 import Slideshow from './components/Slideshow';
 import TextSlider from './components/TextSlider';
-import AboutUs from './AboutUs';
-import Services from './Services';
+import AboutUs from './components/AboutUs';
+import Services from './components/Services';
 
 
 function LandingPage() {
@@ -52,6 +49,7 @@ function LandingPage() {
         <TextSlider />
         <AboutUs />
         <Services />
+        {/* <FAQs/> */}
       </div>
       <div style={{ backgroundColor: '#f1efed' }} className="w-full h-screen"></div>
     </div>
@@ -63,32 +61,23 @@ function LandingPage() {
 function App() {
 
   
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
+
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={isLoggedIn ? <Layout /> : <LandingPage />} />
-        {!isLoggedIn && (
-          <>
+        <Route path="/" element={<LandingPage />} />
+        
             <Route path="homePage" element={<HomePage />} />
-            <Route path="loginPage" element={<LoginPage onLogin={handleLogin} />} />
+            <Route path="loginPage" element={<LoginPage  />} />
             <Route path="registerPage" element={<Registration />} />
             <Route path="payment-process" element={<PaymentProcess />} />
-          </>
-        )}
+          
 
-        {isLoggedIn && (
-          <>
-          <Route path="/" element={<Layout />} >
+        
+          <Route path="/dashboard" element={<Layout />} >
             <Route index={true} element={<Dashboard />} />
             <Route path="institute-details" element={<InstituteDetails />} />
             <Route path="contact-person-details" element={<ContactPersonForm />} />
@@ -99,7 +88,7 @@ function App() {
             <Route path="progress-tracker" element={<ProgressTracker />} />
             <Route path="notice" element={<Notice />} />
             <Route path="calender" element={<Calender />} />
-            <Route path="logout" element={<Logout onLogout={handleLogout} />} />
+            <Route path="logout" element={<Logout  />} />
           </Route>
             <Route path="/chatbot" element={<ChatBot />} >
             </Route>
@@ -127,8 +116,7 @@ function App() {
               <Route path="hostelfacilities-details" element={<HostelFacilitiesForm />}/>
               <Route path="computationalfacilities-details" element={<ComputationalFacilitiesForm />}/>
               </Route>
-          </>
-        )}
+         
       </Routes>
     </Router>
   );

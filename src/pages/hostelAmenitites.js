@@ -1,8 +1,11 @@
 // HostelFacilitiesForm.js
 
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const HostelFacilitiesForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     whetherTheHostelFacilitiyIsAvailable: false,
     girlsHostel: false,
@@ -26,6 +29,7 @@ const HostelFacilitiesForm = () => {
     e.preventDefault();
     // Add your logic for form submission or API call here
     console.log('Form submitted:', formData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

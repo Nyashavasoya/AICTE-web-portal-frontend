@@ -2,11 +2,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LogoutPage = ({ onLogout }) => {
+const LogoutPage = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    onLogout();
     navigate('/');
   };
 

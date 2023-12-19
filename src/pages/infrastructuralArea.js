@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const InfrastructuralAreaForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     roomType: '',
     roomID: '',
@@ -28,6 +31,7 @@ const InfrastructuralAreaForm = () => {
     e.preventDefault();
     // Add your logic for form submission or API call here
     console.log('Form submitted:', formData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

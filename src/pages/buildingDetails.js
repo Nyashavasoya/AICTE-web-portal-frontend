@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const BuildingDetailsForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     buildingDetails: '',
     totalBuiltUpAreaReady: '',
@@ -23,6 +26,7 @@ const BuildingDetailsForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

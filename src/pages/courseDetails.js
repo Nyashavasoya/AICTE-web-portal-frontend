@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const CourseDetailsForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     programme: '',
     affiliatingUniversity: '',
@@ -31,6 +34,7 @@ const CourseDetailsForm = () => {
     e.preventDefault();
     const updatedData = [...submittedData, formData];
     setSubmittedData(updatedData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

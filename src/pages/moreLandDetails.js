@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const MoreLandInformationForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     landRegistrationNumber: '',
     dateOfRegistration: '',
@@ -24,6 +27,7 @@ const MoreLandInformationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
     
   };
 

@@ -4,14 +4,15 @@ const Services = () => {
   const [hoveredService, setHoveredService] = useState(null);
 
   const services = [
-    { title: 'Service 1', description: 'Description for Service 1' },
-    { title: 'Service 2', description: 'Description for Service 2' },
-    { title: 'Service 3', description: 'Description for Service 3' },
+    { title: 'Personalized Document Templates', description: 'The portal dynamically generates personalized, prefilled document templates, minimizing user effort and reducing errors. ' },
+    { title: 'Handbook Assistant', description: 'Chatbot for dynamic and personalized user interaction. ' },
+    { title: 'Fee Structure Generation', description: 'Customized fee structure document generated based on user preferences.' },
   ];
 
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className="w-1/2">
+    <div className="flex h-screen">
+      <div className="w-1/2 p-8">
+        {/* Left side content */}
         <h1 className="text-4xl font-bold mb-8">Our Services</h1>
 
         <div className="flex flex-col gap-8">
@@ -41,6 +42,11 @@ const Services = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="w-1/2 p-8">
+        {/* Right side content */}
+        {/* You can add additional content or components here */}
       </div>
     </div>
   );

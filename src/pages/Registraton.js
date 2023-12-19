@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 
 const Registration = () => {
   const [instituteName, setInstituteName] = useState('');
@@ -30,8 +30,25 @@ const Registration = () => {
     navigate('/payment-process');
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      // Make a POST request to your backend endpoint
+      const response = await axios.post('http://localhost:3500/auth/register', {
+        instituteName,
+        firstName : contactPersonData.cpFirstName,
+        lastName : contactPersonData.cpLastName,
+        designation : contactPersonData.cpDesignation,
+        address : contactPersonData.address,
+        email : contactPersonData.cpEmail,
+        contactNumber : contactPersonData.cpNumber,
+      });
+      console.log(response.data.success)
+      // Redirect or perform other actions based on the response
+    } catch (error) {
+      console.error('Error during registration:', error);
+    }
+    navigate('/dashboard')
   };
 
   const emailIdHandler = (confirmEmail) => {
@@ -175,7 +192,7 @@ const Registration = () => {
         <button
           type="submit"
           className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
-          onClick={onSubmitHandler}
+          onClick={handleSubmit}
         >
           Submit
         </button>

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const QuestionnaireForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     whetherTheInstituteIsHavingApprovalFromCOAorPCIorAAC: false,
     ifYesPleaseSelectApprovedProgram: '',
@@ -20,6 +23,7 @@ const QuestionnaireForm = () => {
     e.preventDefault();
     // Add your form submission logic here
     console.log('Form submitted:', formData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (

@@ -1,8 +1,11 @@
 // InstructionalAreaForm.js
 
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { formsFilledState } from './atoms';
 
 const InstructionalAreaForm = () => {
+  const [formsFilled, setFormsFilled] = useRecoilState(formsFilledState);
   const [formData, setFormData] = useState({
     id: 0,  // You may remove or customize this field based on your needs
     programme: '',
@@ -53,6 +56,7 @@ const InstructionalAreaForm = () => {
         return;
     }
     console.log('Form submitted:', formData);
+    setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
   };
 
   return (
