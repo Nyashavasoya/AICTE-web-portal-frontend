@@ -66,11 +66,12 @@ const ComputationalFacilitiesForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
-      <h2 className="text-3xl font-bold mb-4">Computational Facilities</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label htmlFor="PClaptopsExclusivelyAvailableToStudents" className="block text-gray-800 text-sm font-medium mb-2">
+    <div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+      <h2 className="text-2xl font-bold text-black mb-4">Computational Facilities</h2>
+      <form onSubmit={handleSubmit} className='flex flex-row flex-wrap'>
+        <div className='flex flex-row flex-wrap'>
+        <div className="mb-4 p-6">
+          <label htmlFor="PClaptopsExclusivelyAvailableToStudents" className="block text-sm font-medium text-black">
             PCs/Laptops Exclusively Available to Students
           </label>
           <input
@@ -79,12 +80,12 @@ const ComputationalFacilitiesForm = () => {
             name="PClaptopsExclusivelyAvailableToStudents"
             value={formData.PClaptopsExclusivelyAvailableToStudents}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="PClaptopsAvailableInLibrary" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="PClaptopsAvailableInLibrary" className="block text-sm font-medium text-black">
             PCs/Laptops Available in Library
           </label>
           <input
@@ -93,12 +94,12 @@ const ComputationalFacilitiesForm = () => {
             name="PClaptopsAvailableInLibrary"
             value={formData.PClaptopsAvailableInLibrary}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="PClaptopsAvailableInAdministrativeOffice" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="PClaptopsAvailableInAdministrativeOffice" className="block text-sm font-medium text-black">
             PCs/Laptops Available in Administrative Office
           </label>
           <input
@@ -107,12 +108,12 @@ const ComputationalFacilitiesForm = () => {
             name="PClaptopsAvailableInAdministrativeOffice"
             value={formData.PClaptopsAvailableInAdministrativeOffice}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="PClaptopsAvailableForFacultyMember" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="PClaptopsAvailableForFacultyMember" className="block text-sm font-medium text-black">
             PCs/Laptops Available for Faculty Member
           </label>
           <input
@@ -121,12 +122,12 @@ const ComputationalFacilitiesForm = () => {
             name="PClaptopsAvailableForFacultyMember"
             value={formData.PClaptopsAvailableForFacultyMember}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="numberOfPcInLanguageLab" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="numberOfPcInLanguageLab" className="block text-sm font-medium text-black">
             Number of PCs in Language Lab
           </label>
           <input
@@ -135,12 +136,12 @@ const ComputationalFacilitiesForm = () => {
             name="numberOfPcInLanguageLab"
             value={formData.numberOfPcInLanguageLab}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="internetBandwidthInMbps" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="internetBandwidthInMbps" className="block text-sm font-medium text-black">
             Internet Bandwidth (in Mbps)
           </label>
           <input
@@ -149,12 +150,12 @@ const ComputationalFacilitiesForm = () => {
             name="internetBandwidthInMbps"
             value={formData.internetBandwidthInMbps}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="numberOfLegalApplicationSoftware" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="numberOfLegalApplicationSoftware" className="block text-sm font-medium text-black">
             Number of Legal Application Software
           </label>
           <input
@@ -163,12 +164,12 @@ const ComputationalFacilitiesForm = () => {
             name="numberOfLegalApplicationSoftware"
             value={formData.numberOfLegalApplicationSoftware}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="printersAvailableToStudents" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="printersAvailableToStudents" className="block text-sm font-medium text-black">
             Printers Available to Students
           </label>
           <input
@@ -177,12 +178,12 @@ const ComputationalFacilitiesForm = () => {
             name="printersAvailableToStudents"
             value={formData.printersAvailableToStudents}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="numberOfA1SizeColorPrinter" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="numberOfA1SizeColorPrinter" className="block text-sm font-medium text-black">
             Number of A1 Size Color Printer
           </label>
           <input
@@ -191,12 +192,12 @@ const ComputationalFacilitiesForm = () => {
             name="numberOfA1SizeColorPrinter"
             value={formData.numberOfA1SizeColorPrinter}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="numberOfLegalSystemSoftware" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="numberOfLegalSystemSoftware" className="block text-sm font-medium text-black">
             Number of Legal System Software
           </label>
           <input
@@ -205,12 +206,12 @@ const ComputationalFacilitiesForm = () => {
             name="numberOfLegalSystemSoftware"
             value={formData.numberOfLegalSystemSoftware}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="numberOfOpenSourceSoftware" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="numberOfOpenSourceSoftware" className="block text-sm font-medium text-black">
             Number of Open Source Software
           </label>
           <input
@@ -219,12 +220,12 @@ const ComputationalFacilitiesForm = () => {
             name="numberOfOpenSourceSoftware"
             value={formData.numberOfOpenSourceSoftware}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="numberOfPropsitory" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="numberOfPropsitory" className="block text-sm font-medium text-black">
             Number of Repositories
           </label>
           <input
@@ -233,8 +234,9 @@ const ComputationalFacilitiesForm = () => {
             name="numberOfPropsitory"
             value={formData.numberOfPropsitory}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
+        </div>
         </div>
 
         <div className="mt-4">

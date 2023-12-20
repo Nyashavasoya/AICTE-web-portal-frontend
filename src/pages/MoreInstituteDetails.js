@@ -46,42 +46,46 @@ const InstituteForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Institute Details Form</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+      <h2 className="text-2xl font-bold text-black mb-4">More Institute Details Form</h2>
+      <form onSubmit={handleSubmit} className='flex flex-row flex-wrap'>
+      <div className='flex flex-row flex-wrap'>
         {/* Name */}
-        <div>
-          <label className="block mb-1">Name:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Name:</label>
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2"
+             className="mt-1 p-2 border border-blue-500 rounded "
+
           />
         </div>
 
         {/* Year of Establishment */}
-        <div>
-          <label className="block mb-1">Year of Establishment:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Year of Establishment:</label>
           <input
             type="text"
             name="yearOfEstablishment"
             value={formData.yearOfEstablishment}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2"
+             className="mt-1 p-2 border border-blue-500 rounded "
+
           />
         </div>
 
         {/* Institute Type */}
-        <div>
-          <label className="block mb-1">Institute Type:</label>
+        <div  className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Institute Type:</label>
           <select
             type="text"
             name="instituteType"
             value={formData.instituteType}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2"
+             className="mt-1 p-2 border border-blue-500 rounded "
+
           >
             <option value="">Select Institute Type</option>
             {/* Add options based on your institute types */}
@@ -90,14 +94,14 @@ const InstituteForm = () => {
           </select>
         </div>
 
-        <div>
+        <div className="mb-4 p-6">
           <label htmlFor="state">State</label>
           <select
             id="state"
             name="state_Ut"
             value={formData.state_Ut}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border border-blue-500 rounded"
           >
             <option value="">Select State</option>
             {statesData.states.map((stateObj) => (
@@ -108,14 +112,14 @@ const InstituteForm = () => {
           </select>
         </div>
 
-        <div>
+        <div className="mb-4 p-6">
           <label htmlFor="district">District</label>
           <select
             id="district"
             name="district"
             value={formData.district}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border border-blue-500 rounded"
           >
             <option value="">Select District</option>
             {formData.state &&
@@ -129,52 +133,56 @@ const InstituteForm = () => {
           </select>
         </div>
 
-        <div>
-          <label className="block mb-1">Town</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Town</label>
           <input
             type="text"
             name="town"
             value={formData.town}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2"
+             className="mt-1 p-2 border border-blue-500 rounded "
+
           />
         </div>
 
-        <div>
-          <label className="block mb-1">Pin Code</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Pin Code</label>
           <input
             type="text"
             name="pin"
             value={formData.pin}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2"
+             className="mt-1 p-2 border border-blue-500 rounded "
+
           />
         </div>
 
-        <div>
-          <label className="block mb-1">Primary Email</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Primary Email</label>
           <input
             type="text"
             name="primaryEmail"
             value={formData.primaryEmail}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2"
+             className="mt-1 p-2 border border-blue-500 rounded "
+
           />
         </div>
 
-        <div>
-          <label className="block mb-1">Percent Of Grant Recieved From Government</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Percent Of Grant Recieved From Government</label>
           <input
             type="text"
             name="percentGrantRecievedFromGovernment"
             value={formData.percentGrantRecievedFromGovernment}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-md p-2"
+             className="mt-1 p-2 border border-blue-500 rounded "
+
           />
         </div>
 
-        <div>
-  <label className="block mb-1">
+        <div className="mb-4 p-6">
+  <label className="block text-sm font-medium text-black">
     For Persons with Disabilities (PWD):
   </label>
   <input
@@ -188,8 +196,8 @@ const InstituteForm = () => {
 </div>
 
 {/* Women Institute */}
-<div>
-  <label className="block mb-1">Women Institute:</label>
+<div className="mb-4 p-6">
+  <label className="block text-sm font-medium text-black">Women Institute:</label>
   <input
     type="checkbox"
     name="womenInstitute"
@@ -201,8 +209,8 @@ const InstituteForm = () => {
 </div>
 
 {/* LOI or LOI with LOA */}
-<div>
-  <label className="block mb-1">
+<div className="mb-4 p-6">
+  <label className="block text-sm font-medium text-black">
     Letter of Intent (LOI) or LOI with Letter of Approval (LOA):
   </label>
   <input
@@ -210,13 +218,14 @@ const InstituteForm = () => {
     name="LOIorLOIwithLOA"
     value={formData.LOIorLOIwithLOA}
     onChange={handleChange}
-    className="w-full border border-gray-300 rounded-md p-2"
+     className="mt-1 p-2 border border-blue-500 rounded "
+
   />
 </div>
 
 {/* Self Financed Courses */}
-<div>
-  <label className="block mb-1">Self Financed Courses:</label>
+<div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+  <label className="block text-sm font-medium text-black">Self Financed Courses:</label>
   <input
     type="checkbox"
     name="selfFinancedCourses"
@@ -226,6 +235,8 @@ const InstituteForm = () => {
   />
   <span>Yes, the institute offers self-financed courses</span>
 </div>
+</div>
+
 
         {/* Submit Button */}
         <button

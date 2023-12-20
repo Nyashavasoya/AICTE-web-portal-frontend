@@ -74,19 +74,20 @@ const ContactPersonForm = ({contactPersonData}) => {
 
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
-      <h2 className="text-3xl font-bold mb-4">Contact Person Details</h2>
+    <div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+      <h2 className="text-2xl font-bold text-black mb-4">Contact Person Details</h2>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className='flex flex-row flex-wrap'>
+        <div className='flex flex-row flex-wrap'>
         {/* Title */}
-        <div>
-        <label htmlFor="title">Title</label>
+        <div className="mb-4 p-6">
+        <label htmlFor="title" className="block text-sm font-medium text-black">Title</label>
           <select
             id="title"
             name="Title"
             value={formData.Title}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select Title</option>
             <option value="mr">Mr.</option>
@@ -96,61 +97,61 @@ const ContactPersonForm = ({contactPersonData}) => {
         </div>
 
         {/* First Name */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">First Name:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">First Name:</label>
           <input
             type="text"
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Middle Name */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Middle Name:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Middle Name:</label>
           <input
             type="text"
             name="middleName"
             value={formData.middleName}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Last Name */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Last Name:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Last Name:</label>
           <input
             type="text"
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="address">Address</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="address" className="block text-sm font-medium text-black">Address</label>
           <input
             type="text"
             id="address"
             name="address"
             value={formData.address}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="state">State</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="state" className="block text-sm font-medium text-black">State</label>
           <select
             id="state"
             name="state"
             value={formData.state}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select State</option>
             {statesData.states.map((stateObj) => (
@@ -161,14 +162,14 @@ const ContactPersonForm = ({contactPersonData}) => {
           </select>
         </div>
 
-        <div>
-          <label htmlFor="district">District</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="district" className="block text-sm font-medium text-black">District</label>
           <select
             id="district"
             name="district"
             value={formData.district}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select District</option>
             {formData.state &&
@@ -182,53 +183,53 @@ const ContactPersonForm = ({contactPersonData}) => {
           </select>
         </div>
 
-        <div>
-          <label htmlFor=" town">Town</label>
+        <div className="mb-4 p-6">
+          <label htmlFor=" town" className="block text-sm font-medium text-black">Town</label>
           <input
             type="text"
             id="town"
             name="town"
             value={formData.town}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="postalCode">Pin-Code</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="postalCode" className="block text-sm font-medium text-black">Pin-Code</label>
           <input
             type="text"
             id="postalCode"
             name="postalCode"
             value={formData.postalCode}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
-        <div>
-          <label htmlFor="designation">Designation</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="designation" className="block text-sm font-medium text-black">Designation</label>
           <input
             type="text"
             id="designation"
             name="designation"
             value={formData.designation}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
-        <div>
-          <label htmlFor="STDcode">STDcode</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="STDcode" className="block text-sm font-medium text-black">STDcode</label>
           <input
             type="text"
             id="STDcode"
             name="STDcode"
             value={formData.STDcode}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
+        <div className="mb-4 p-6">
         <label className="block mb-1">Landline Number:</label>
         <input
           type="tel"
@@ -237,53 +238,54 @@ const ContactPersonForm = ({contactPersonData}) => {
           onChange={handleChange}
           pattern="[0-9]{5,10}"
           title="Please enter between 5 and 10 digits"
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
         />
       </div>
 
-        <div>
-          <label htmlFor="mobileNumber">Contact Number</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="mobileNumber" className="block text-sm font-medium text-black">Contact Number</label>
           <input
             type="text"
             id="mobileNumber"
             name="mobileNumber"
             value={formData.mobileNumber}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
-        <div>
-          <label htmlFor="alternateMobileNumber">Alternate Mobile Number</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="alternateMobileNumber" className="block text-sm font-medium text-black">Alternate Mobile Number</label>
           <input
             type="text"
             id="alternateMobileNumber"
             name="alternateMobileNumber"
             value={formData.alternateMobileNumber}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
-        <div>
-          <label htmlFor="emailAddress">Email Address</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="emailAddress" className="block text-sm font-medium text-black">Email Address</label>
           <input
             type="text"
             id="emailAddress"
             name="emailAddress"
             value={formData.emailAddress}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
-        <div>
-          <label htmlFor="alternativeEmailAdress">Alternate Email Address</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="alternativeEmailAdress" className="block text-sm font-medium text-black">Alternate Email Address</label>
           <input
             type="text"
             id="alternativeEmailAdress"
             name="alternativeEmailAdress"
             value={formData.alternativeEmailAdress}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
+        </div>
         </div>
 
 

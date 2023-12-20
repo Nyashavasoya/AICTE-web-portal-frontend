@@ -36,123 +36,126 @@ const InstituteDetails = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
-      <h2 className="text-3xl font-bold mb-4">Institue Details</h2>
+    <div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+      <h2 className="text-2xl font-bold text-black mb-4">Institue Details</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label htmlFor="currentApplicationNumber" className="block text-gray-800 text-sm font-medium mb-2">currentApplicationNumber</label>
+      <div className='flex flex-row flex-wrap'>
+        <div className="mb-4 p-6">
+          <label htmlFor="currentApplicationNumber" className="block text-sm font-medium text-black">currentApplicationNumber</label>
           <input
             type="number"
             id="currentApplicationNumber"
             name="currentApplicationNumber"
             value={formData.currentApplicationNumber}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border  border-blue-600 rounded "
+
           />
         </div>
 
-        <div>
-          <label htmlFor="applicationType" className="block text-gray-800 text-sm font-medium mb-2">applicationType</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="applicationType" className="block text-sm font-medium text-black">applicationType</label>
           <input
             type="number"
             id="applicationType"
             name="applicationType"
             value={formData.applicationType}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border  border-blue-600 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="currentStatus" className="block text-gray-800 text-sm font-medium mb-2">currentStatus</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="currentStatus" className="block text-sm font-medium text-black">currentStatus</label>
           <input
             type="number"
             id="currentStatus"
             name="currentStatus"
             value={formData.currentStatus}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-600 rounded"
           />
         </div>
 
-        <div>
-          <label htmlFor="subStatus" className="block text-gray-800 text-sm font-medium mb-2">subStatus</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="subStatus" className="block text-sm font-medium text-black">subStatus</label>
           <input
             type="number"
             id="subStatus"
             name="subStatus"
             value={formData.subStatus}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-600 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="academicYear" className="block text-gray-800 text-sm font-medium mb-2">academicYear</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="academicYear" className="block text-sm font-medium text-black">academicYear</label>
           <input
             type="date"
             id="academicYear"
             name="academicYear"
             value={formData.academicYear}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border  border-blue-600 rounded "
           />
         </div>
-        <div>
-          <label htmlFor="applicationOpenedDate" className="block text-gray-800 text-sm font-medium mb-2">applicationOpenedDate</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="applicationOpenedDate" className="block text-sm font-medium text-black">applicationOpenedDate</label>
           <input
             type="date"
             id="applicationOpenedDate"
             name="applicationOpenedDate"
             value={formData.applicationOpenedDate}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border  border-blue-600 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="applicationSubmittedDate" className="block text-gray-800 text-sm font-medium mb-2">applicationSubmittedDate</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="applicationSubmittedDate" className="block text-sm font-medium text-black">applicationSubmittedDate</label>
           <input
             type="date"
             id="applicationSubmittedDate"
             name="applicationSubmittedDate"
             value={formData.applicationSubmittedDate}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border  border-blue-600 rounded "
           />
         </div>
-        <div>
-          <label htmlFor="reopenedApplicationDate" className="block text-gray-800 text-sm font-medium mb-2">reopenedApplicationDate</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="reopenedApplicationDate" className="block text-sm font-medium text-black">reopenedApplicationDate</label>
           <input
             type="date"
             id="reopenedApplicationDate"
             name="reopenedApplicationDate"
             value={formData.reopenedApplicationDate}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border  border-blue-600 rounded "
           />
         </div>
-        <div>
-          <label htmlFor="appealRequestDate" className="block text-gray-800 text-sm font-medium mb-2">appealRequestDate</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="appealRequestDate" className="block text-sm font-medium text-black">appealRequestDate</label>
           <input
             type="date"
             id="appealRequestDate"
             name="appealRequestDate"
             value={formData.appealRequestDate}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-600 rounded "
           />
         </div>
-        <div>
-          <label htmlFor="applicationDontReceived" className="block text-gray-800 text-sm font-medium mb-2">applicationDontReceived</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="applicationDontReceived" className="block text-sm font-medium text-black">applicationDontReceived</label>
           <input
             type="number"
             id="applicationDontReceived"
             name="applicationDontReceived"
             value={formData.applicationDontReceived}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-600 rounded "
           />
+        </div>
         </div>
 
         <div>

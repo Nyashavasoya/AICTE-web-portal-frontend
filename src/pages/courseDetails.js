@@ -38,17 +38,18 @@ const CourseDetailsForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
-      <h2 className="text-3xl font-bold mb-4">Course Details</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+      <h2 className="text-2xl font-bold text-black mb-4">Course Details</h2>
+      <form onSubmit={handleSubmit} className='flex flex-row flex-wrap'>
         {/* Course Programme Dropdown */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Select Programme:</label>
+        <div className='flex flex-row flex-wrap'>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Programme:</label>
           <select
             name="programme"
             value={formData.programme}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select Programme</option>
             <option value="Programme1">Programme 1</option>
@@ -58,61 +59,61 @@ const CourseDetailsForm = () => {
         </div>
 
         {/* Affiliating University */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Affiliating University:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Affiliating University:</label>
           <input
             type="text"
             name="affiliatingUniversity"
             value={formData.affiliatingUniversity}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Department */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Department:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Department:</label>
           <input
             type="text"
             name="department"
             value={formData.department}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Name of the Course */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Name of the Course:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Name of the Course:</label>
           <input
             type="text"
             name="nameOfTheCourse"
             value={formData.nameOfTheCourse}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Duration */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Duration (in years):</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Duration (in years):</label>
           <input
             type="text"
             name="duration"
             value={formData.duration}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Level of Course Dropdown */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Select Level of Course:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Level of Course:</label>
           <select
             name="levelOfCourse"
             value={formData.levelOfCourse}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select Level</option>
             <option value="Undergraduate">Undergraduate</option>
@@ -122,25 +123,25 @@ const CourseDetailsForm = () => {
         </div>
 
         {/* Year Started */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Year Started:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Year Started:</label>
           <input
             type="text"
             name="yearStarted"
             value={formData.yearStarted}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Shift Dropdown (only applicable when mode of conduct is regular) */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Select Shift:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Shift:</label>
           <select
             name="shift"
             value={formData.shift}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select Shift</option>
             <option value="Morning">Morning</option>
@@ -150,13 +151,13 @@ const CourseDetailsForm = () => {
         </div>
 
         {/* Full-Time or Part-Time Dropdown */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Select Full-Time or Part-Time:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Full-Time or Part-Time:</label>
           <select
             name="fullTimeorPartTime"
             value={formData.fullTimeorPartTime}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select Option</option>
             <option value="Full-Time">Full-Time</option>
@@ -166,13 +167,13 @@ const CourseDetailsForm = () => {
         </div>
 
         {/* Intake Applicable For Dropdown */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Select Intake Applicable For:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Intake Applicable For:</label>
           <select
             name="intakeApplicableFor"
             value={formData.intakeApplicableFor}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select Intake</option>
             <option value="2023">2023</option>
@@ -182,25 +183,25 @@ const CourseDetailsForm = () => {
         </div>
 
         {/* Applying For */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Applying For:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Applying For:</label>
           <input
             type="text"
             name="applyingFor"
             value={formData.applyingFor}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Mode of Conduct Dropdown */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Select Mode of Conduct:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Mode of Conduct:</label>
           <select
             name="modeOFCounduct"
             value={formData.modeOFCounduct}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select Mode of Conduct</option>
             <option value="Regular">Regular</option>
@@ -210,13 +211,13 @@ const CourseDetailsForm = () => {
         </div>
 
         {/* Course Type Dropdown */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Select Course Type:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Course Type:</label>
           <select
             name="courseType"
             value={formData.courseType}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+           className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select Course Type</option>
             <option value="Type1">Type 1</option>
@@ -224,13 +225,15 @@ const CourseDetailsForm = () => {
             {/* Add more options as needed */}
           </select>
         </div>
+        </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600 transition duration-300">Submit</button>
       </form>
+
 
       {/* Display submitted data in a table */}
       {submittedData.length > 0 && (
-        <div>
+        <div className="mb-4 p-6">
           <h2>Submitted Data</h2>
           <table border="1">
             <thead>

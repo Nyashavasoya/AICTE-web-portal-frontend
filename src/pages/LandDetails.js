@@ -58,11 +58,12 @@ const LandDetailsForm = () => {
   };
 
   return (
-    <div className='max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md'>
-      <h2 className="text-3xl font-bold mb-4">Land Details</h2>
-      <form onSubmit={handleSubmit} className='space-y-4'>
-        <div>
-          <label>Select Location:</label>
+    <div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+      <h2 className="text-2xl font-bold text-black mb-4">Land Details</h2>
+      <form onSubmit={handleSubmit} className='flex flex-row flex-wrap'>
+      <div className='flex flex-row flex-wrap'>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Location:</label>
           <select name="location" value={formData.location} onChange={handleChange}>
             <option value="">Select Location</option>
             <option value="Location1">Location 1</option>
@@ -72,8 +73,8 @@ const LandDetailsForm = () => {
         </div>
 
         {/* Latitude Dropdown */}
-        <div>
-          <label>Select Latitude:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Latitude:</label>
           <select name="latitude" value={formData.latitude} onChange={handleChange}>
             <option value="">Select Latitude</option>
             <option value="Latitude1">Latitude 1</option>
@@ -83,8 +84,8 @@ const LandDetailsForm = () => {
         </div>
 
         {/* Longitude Dropdown */}
-        <div>
-          <label>Select Longitude:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Longitude:</label>
           <select name="longitude" value={formData.longitude} onChange={handleChange}>
             <option value="">Select Longitude</option>
             <option value="Longitude1">Longitude 1</option>
@@ -94,96 +95,104 @@ const LandDetailsForm = () => {
         </div>
 
         {/* Total Area in Acres */}
-        <div>
-          <label>Total Area in Acres:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Total Area in Acres:</label>
           <input
             type="text"
             name="totalAreaInAcres"
             value={formData.totalAreaInAcres}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Number of Pieces */}
-        <div>
-          <label>Number of Pieces:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Number of Pieces:</label>
           <input
             type="text"
             name="numberOfPieces"
             value={formData.numberOfPieces}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Latitude Degree */}
-        <div>
-          <label>Latitude Degree (0 - 90):</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Latitude Degree (0 - 90):</label>
           <input
             type="text"
             name="lattitudeDegree"
             value={formData.lattitudeDegree}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Longitude Degree */}
-        <div>
-          <label>Longitude Degree (0 - 90):</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Longitude Degree (0 - 90):</label>
           <input
             type="text"
             name="londitudeDegree"
             value={formData.londitudeDegree}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Land Restricted With */}
-        <div>
-          <label>Land Restricted With:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Land Restricted With:</label>
           <input
             type="text"
             name="landRestrictedWith"
             value={formData.landRestrictedWith}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Land Piece Area 1 in Acres */}
-        <div>
-          <label>Land Piece Area 1 in Acres:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Land Piece Area 1 in Acres:</label>
           <input
             type="text"
             name="landPieceArea1InAcres"
             value={formData.landPieceArea1InAcres}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Latitude Minute */}
-        <div>
-          <label>Latitude Minute (0 - 60):</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Latitude Minute (0 - 60):</label>
           <input
             type="text"
             name="latitudeMinute"
             value={formData.latitudeMinute}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Longitude Minute */}
-        <div>
-          <label>Longitude Minute (0 - 60):</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Longitude Minute (0 - 60):</label>
           <input
             type="text"
             name="longitudeMinute"
             value={formData.longitudeMinute}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Ownership Details Dropdown */}
-        <div>
-          <label>Select Ownership Details:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Select Ownership Details:</label>
           <select name="ownwershipDetails" value={formData.ownwershipDetails} onChange={handleChange}>
             <option value="">Select Ownership Details</option>
             <option value="Ownership1">Ownership 1</option>
@@ -194,88 +203,96 @@ const LandDetailsForm = () => {
 
         {/* Land Piece Area 2 in Acres (applicable if pieces are 2) */}
         {formData.numberOfPieces === '2' && (
-          <div>
-            <label>Land Piece Area 2 in Acres:</label>
+          <div className="mb-4 p-6">
+            <label className="block text-sm font-medium text-black">Land Piece Area 2 in Acres:</label>
             <input
               type="text"
               name="landPieceArea2InAcres"
               value={formData.landPieceArea2InAcres}
               onChange={handleChange}
+              className="mt-1 p-2 border border-blue-500 rounded "
             />
           </div>
         )}
 
         {/* Land Use Certificate Issued By */}
-        <div>
-          <label>Land Use Certificate Issued By:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Land Use Certificate Issued By:</label>
           <input
             type="text"
             name="landUseCertificateIssuedBy"
             value={formData.landUseCertificateIssuedBy}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Land Use Certificate Issue Date */}
-        <div>
-          <label>Land Use Certificate Issue Date:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Land Use Certificate Issue Date:</label>
           <input
             type="text"
             name="landUseCertificateIssueDate"
             value={formData.landUseCertificateIssueDate}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Land in Northern Hilly Area Checkbox */}
-        <div>
-          <label>Land in Northern Hilly Area:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Land in Northern Hilly Area:</label>
           <input
             type="checkbox"
             name="landInNorthernHillyArea"
             checked={formData.landInNorthernHillyArea}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Is Land Mortgaged Checkbox */}
-        <div>
-          <label>Is Land Mortgaged:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Is Land Mortgaged:</label>
           <input
             type="checkbox"
             name="isLandMortgated"
             checked={formData.isLandMortgated}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Mortgaged Purpose (applicable when mortgaged is true) */}
         {formData.isLandMortgated && (
-          <div>
-            <label>Mortgaged Purpose:</label>
+          <div className="mb-4 p-6">
+            <label className="block text-sm font-medium text-black">Mortgaged Purpose:</label>
             <input
               type="text"
               name="mortgatedPurpose"
               value={formData.mortgatedPurpose}
               onChange={handleChange}
+              className="mt-1 p-2 border border-blue-500 rounded "
             />
           </div>
         )}
 
         {/* Date of Registration */}
-        <div>
-          <label>Date of Registration:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Date of Registration:</label>
           <input
             type="text"
             name="dateIFRegistration"
             value={formData.dateIFRegistration}
             onChange={handleChange}
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
+        </div>
         </div>
 
         {/* Submit Button */}
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" className="bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600 transition duration-300">Submit</button>
         </div>
       </form>
     </div>

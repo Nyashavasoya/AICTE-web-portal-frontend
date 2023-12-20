@@ -39,29 +39,32 @@ const OrganisationDetailsForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+      <h2 className="text-2xl font-bold text-black mb-4">Organization Details Form</h2>
+    <form onSubmit={handleSubmit} className='flex flex-row flex-wrap'>
       {/* Name of Institute */}
-      <div>
-        <label className="block mb-1">Name of Institute:</label>
+      <div className='flex flex-row flex-wrap'> 
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">Name of Institute:</label>
         <input
           type="text"
           name="nameOfInstitute"
           value={formData.nameOfInstitute}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
           required
         />
       </div>
 
       {/* Type of Institute (dropdown) */}
-      <div>
-        <label className="block mb-1">Type of Institute:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">Type of Institute:</label>
         {/* Replace 'options' with your actual dropdown options */}
         <select
           name="typeOfInstitute"
           value={formData.typeOfInstitute}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
           required
         >
           <option value="">Select Type</option>
@@ -72,46 +75,46 @@ const OrganisationDetailsForm = () => {
       </div>
 
       {/* Registered With */}
-      <div>
-        <label className="block mb-1">Registered With:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">Registered With:</label>
         <input
           type="text"
           name="registeredWith"
           value={formData.registeredWith}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
           required
         />
       </div>
 
       {/* Registration Date (calendar) */}
-      <div>
-        <label className="block mb-1">Registration Date:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">Registration Date:</label>
         <input
           type="date"
           name="registrationDate"
           value={formData.registrationDate}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
           required
         />
       </div>
 
       {/* Organisation Address */}
-      <div>
-        <label className="block mb-1">Organisation Address:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">Organisation Address:</label>
         <textarea
           name="organisationAddress"
           value={formData.organisationAddress}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
           required
         ></textarea>
       </div>
 
       {/* PIN (6 digits only) */}
-      <div>
-        <label className="block mb-1">PIN:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">PIN:</label>
         <input
           type="text"
           name="pin"
@@ -119,33 +122,33 @@ const OrganisationDetailsForm = () => {
           onChange={handleChange}
           pattern="[0-9]{6}"
           title="Please enter 6 digits"
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
           required
         />
       </div>
 
       {/* PAN (Alphanumeric) */}
-      <div>
-        <label className="block mb-1">PAN:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">PAN:</label>
         <input
           type="text"
           name="PAN"
           value={formData.PAN}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
           required
         />
       </div>
 
       {/* State */}
-      <div>
-          <label htmlFor="state">State</label>
+      <div className="mb-4 p-6">
+          <label htmlFor="state" className="block text-sm font-medium text-black">State</label>
           <select
             id="state"
             name="state"
             value={formData.state}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select State</option>
             {statesData.states.map((stateObj) => (
@@ -156,14 +159,14 @@ const OrganisationDetailsForm = () => {
           </select>
         </div>
 
-        <div>
-          <label htmlFor="district">District</label>
+        <div className="mb-4 p-6">
+          <label htmlFor="district" className="block text-sm font-medium text-black">District</label>
           <select
             id="district"
             name="district"
             value={formData.district}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="mt-1 p-2 border border-blue-500 rounded "
           >
             <option value="">Select District</option>
             {formData.state &&
@@ -178,33 +181,33 @@ const OrganisationDetailsForm = () => {
         </div>
 
       {/* Town */}
-      <div>
-        <label className="block mb-1">Town:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">Town:</label>
         <input
           type="text"
           name="town"
           value={formData.town}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
           required
         />
       </div>
 
       {/* Organisation Website */}
-      <div>
-        <label className="block mb-1">Organisation Website:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">Organisation Website:</label>
         <input
           type="url"
           name="organisationWebsite"
           value={formData.organisationWebsite}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
         />
       </div>
 
       {/* STD Code (6 digits max) */}
-      <div>
-        <label className="block mb-1">STD Code:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">STD Code:</label>
         <input
           type="text"
           name="STDcode"
@@ -212,13 +215,13 @@ const OrganisationDetailsForm = () => {
           onChange={handleChange}
           pattern="[0-9]{1,6}"
           title="Please enter 6 digits or less"
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
         />
       </div>
 
       {/* Landline Number (5-10 digits) */}
-      <div>
-        <label className="block mb-1">Landline Number:</label>
+      <div className="mb-4 p-6">
+        <label className="block text-sm font-medium text-black">Landline Number:</label>
         <input
           type="tel"
           name="landlineNumber"
@@ -226,14 +229,16 @@ const OrganisationDetailsForm = () => {
           onChange={handleChange}
           pattern="[0-9]{5,10}"
           title="Please enter between 5 and 10 digits"
-          className="w-full border border-gray-300 rounded-md p-2"
+          className="mt-1 p-2 border border-blue-500 rounded "
         />
+      </div>
       </div>
 
       <button type="submit" className="mt-4 bg-blue-500 text-white p-2 rounded">
         Submit
       </button>
     </form>
+    </div>
   );
 };
 
