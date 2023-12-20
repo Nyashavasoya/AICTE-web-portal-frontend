@@ -70,7 +70,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className=" flex bg-gray-200 p-4 mt-2 rounded-md shadow-md h-72 ml-8 w-custom border border-blue-500">
+      <div className=" flex bg-gray-200 p-4 mt-2 rounded-md shadow-md h-72 ml-4 w-custom border border-blue-500">
         <div flex flex-col>
       <h2 className="text-xl font-bold mb-4">Recent Activity</h2>     
       <table >
