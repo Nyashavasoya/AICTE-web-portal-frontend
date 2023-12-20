@@ -33,11 +33,12 @@ const HostelFacilitiesForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
-      <h2 className="text-3xl font-bold mb-4">Hostel Amenities</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label htmlFor="whetherTheHostelFacilitiyIsAvailable" className="block text-gray-800 text-sm font-medium mb-2">
+    <div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+      <h2 className="text-2xl font-bold text-black mb-4">Hostel Amenities</h2>
+      <form onSubmit={handleSubmit} className='flex flex-row flex-wrap'>
+      <div className='flex flex-row flex-wrap'>
+        <div className="mb-4 p-6">
+          <label htmlFor="whetherTheHostelFacilitiyIsAvailable" className="block text-sm font-medium text-black">
             Hostel Facility Availability
           </label>
           <input
@@ -46,12 +47,12 @@ const HostelFacilitiesForm = () => {
             name="whetherTheHostelFacilitiyIsAvailable"
             checked={formData.whetherTheHostelFacilitiyIsAvailable}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="girlsHostel" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="girlsHostel" className="block text-sm font-medium text-black">
             Girls Hostel
           </label>
           <input
@@ -60,12 +61,12 @@ const HostelFacilitiesForm = () => {
             name="girlsHostel"
             checked={formData.girlsHostel}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="numberOfRooms" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="numberOfRooms" className="block text-sm font-medium text-black">
             Number of Rooms
           </label>
           <input
@@ -74,12 +75,12 @@ const HostelFacilitiesForm = () => {
             name="numberOfRooms"
             value={formData.numberOfRooms}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="hostelCapacity" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="hostelCapacity" className="block text-sm font-medium text-black">
             Hostel Capacity
           </label>
           <input
@@ -88,12 +89,12 @@ const HostelFacilitiesForm = () => {
             name="hostelCapacity"
             value={formData.hostelCapacity}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="boysHostel" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="boysHostel" className="block text-sm font-medium text-black">
             Boys Hostel
           </label>
           <input
@@ -102,12 +103,12 @@ const HostelFacilitiesForm = () => {
             name="boysHostel"
             checked={formData.boysHostel}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="numberOfRoomsForBoys" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="numberOfRoomsForBoys" className="block text-sm font-medium text-black">
             Number of Rooms for Boys
           </label>
           <input
@@ -115,12 +116,12 @@ const HostelFacilitiesForm = () => {
             id="numberOfRoomsForBoys"
             name="numberOfRoomsForBoys"
             value={formData.numberOfRoomsForBoys}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
-        <div>
-          <label htmlFor="totalCapacity" className="block text-gray-800 text-sm font-medium mb-2">
+        <div className="mb-4 p-6">
+          <label htmlFor="totalCapacity" className="block text-sm font-medium text-black">
             Total Capacity
           </label>
           <input
@@ -129,8 +130,9 @@ const HostelFacilitiesForm = () => {
             name="totalCapacity"
             value={formData.totalCapacity}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 border border-blue-500 rounded "
           />
+        </div>
         </div>
 
         <div className="mt-4">

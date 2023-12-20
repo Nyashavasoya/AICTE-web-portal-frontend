@@ -123,21 +123,21 @@ const AdministrativeAreaForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-md">
       <h2 className='text-3xl font-bold mb-4'>Administration Area </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label htmlFor="roomID" className="block text-gray-800 text-sm font-medium mb-2">
-            Room ID:
-          </label>
+        <div className='relative'>
           <input
             type="text"
             id="roomID"
             name="roomID"
             value={formData.roomID}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+            class="border-b py-1 focus:outline-none focus:border-purple-600 focus:border-b-2 transition-colors peer"
           />
+          <label htmlFor="roomID" className="absolute left-0 top-1 text-gray-600 cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-purple-600 transition-all">
+            Room ID:
+          </label>
         </div>
 
         <div>

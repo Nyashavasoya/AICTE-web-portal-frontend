@@ -4,7 +4,6 @@ import Layout from './components/Layout/Layout';
 import ApplicationProcess from './components/ApplicationProcess';
 import ChatBot from './components/ChatBot';
 import MyDocs from './components/MyDocs';
-import Payments from './components/Payments';
 import Logout from './components/Logout';
 import LoginPage from './pages/LoginPage';
 import Registration from './pages/Registraton';
@@ -66,11 +65,6 @@ function LandingPage() {
 
 function App() {
 
-  
-
-
-
-
   return (
     <Router>
       <Routes>
@@ -80,7 +74,6 @@ function App() {
             <Route path="homePage" element={<HomePage />} />
             <Route path="loginPage" element={<LoginPage  />} />
             <Route path="registerPage" element={<Registration />} />
-            <Route path="payment-process" element={<PaymentProcess />} />
           
 
         
@@ -91,7 +84,6 @@ function App() {
             <Route path="trustee-details" element={<TrusteeDetailsForm />} />
             <Route path="land-details" element={<LandDetailsForm />} />
             <Route path="my-documents" element={<MyDocs />} />
-            <Route path="payment" element={<Payments />} />
             <Route path="logout" element={<Logout  />} />
           </Route>
             <Route path="/chatbot" element={<ChatBot />} >
