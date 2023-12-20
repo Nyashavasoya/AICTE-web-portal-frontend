@@ -1,15 +1,13 @@
-// Add this inside your component or in a shared styles file
 import './tailwind.css';
 
-// ...
 
-// Inside your component
 const TextSlider = () => {
   return (
-    <div className="overflow-hidden whitespace-nowrap bg-black">
+    <div className="overflow-hidden whitespace-nowrap bg-black h-8 flex items-center">
       <div className="inline-block animate-slide-left text-white font-bold">
-        {/* Your sliding text goes here */}
-        Notice 1: Important information goes here. Notice 2: Another important update for users. Notice 3: Exciting news about upcoming events. {/* Add more notices as needed */}
+      <a href="https://www.aicte-india.org/" className="text-link text-white">Approval Process Handbook 2024-27 out! Check here. </a>&nbsp;&nbsp;
+        Last date to apply for approval of new institute is 24 December 2023. Get registered at the earliest! &nbsp;&nbsp;
+        Corrigendum-5 regarding the approval process handbook.
       </div>
     </div>
   );
