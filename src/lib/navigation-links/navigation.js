@@ -26,7 +26,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
 	{
 		key: 'chatbot',
 		label: 'Chat-with-Handbook',
-		path: '/chatbot',
+		path: 'https://twelve-wings-tickle.loca.lt/',
 		icon: <CiChat2 />
 	},
 ]
