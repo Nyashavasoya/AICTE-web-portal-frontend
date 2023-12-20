@@ -4,11 +4,9 @@ import Layout from './components/Layout/Layout';
 import ApplicationProcess from './components/ApplicationProcess';
 import ChatBot from './components/ChatBot';
 import MyDocs from './components/MyDocs';
-import Payments from './components/Payments';
 import Logout from './components/Logout';
 import LoginPage from './pages/LoginPage';
 import Registration from './pages/Registraton';
-import HomePage from './pages/HomePage';
 import InstituteDetails from './pages/InstituteDetails';
 import { useState } from 'react';
 import ContactPersonForm from './pages/contactPersonDetails';
@@ -38,6 +36,7 @@ import AboutUs from './components/AboutUs';
 import FAQs from './components/FAQs';
 import Footer from './components/Footer';
 import ElgibilityChecker from './components/EligibilityChecker';
+import axios from 'axios';
 function LandingPage() {
 
   return (
@@ -64,27 +63,36 @@ function LandingPage() {
 
 function App() {
 
-  
-
-
-
-
   return (
     <Router>
       <Routes>
         <Route path="/eligibility" element={<ElgibilityChecker />} />
+        <Route path="/my-documents" element={<MyDocs />}> </Route>
         <Route path="/" element={<LandingPage />} />
         
+<<<<<<< HEAD
             <Route path="/homePage" element={<HomePage />} />
             <Route path="/loginPage" element={<LoginPage  />} />
             <Route path="/registerPage" element={<Registration />} />
+=======
+            <Route path="loginPage" element={<LoginPage  />} />
+            <Route path="registerPage" element={<Registration />} />
+>>>>>>> d0055a3ad8e6634e5ba9b1ae00b473207a6735bb
           
 
-        
+          
           <Route path="/dashboard" element={<Layout />} >
             <Route index={true} element={<Dashboard />} />
+<<<<<<< HEAD
             <Route path="my-documents" element={<MyDocs />} />
             <Route path="payment" element={<Payments />} />
+=======
+            <Route path="institute-details" element={<InstituteDetails />} />
+            <Route path="contact-person-details" element={<ContactPersonForm />} />
+            <Route path="trustee-details" element={<TrusteeDetailsForm />} />
+            <Route path="land-details" element={<LandDetailsForm />} />
+            
+>>>>>>> d0055a3ad8e6634e5ba9b1ae00b473207a6735bb
             <Route path="logout" element={<Logout  />} />
           </Route>
             <Route path="/chatbot" element={<ChatBot />} >

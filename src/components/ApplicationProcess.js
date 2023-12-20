@@ -3,7 +3,12 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { FaDotCircle } from "react-icons/fa";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 
+=======
+import FileUploadButton from './MyDocs';
+import EligibilityChecker from './EligibilityChecker';
+>>>>>>> d0055a3ad8e6634e5ba9b1ae00b473207a6735bb
 const FormNavItem = ({ to, iconClass, formName }) => {
   const { pathname } = useLocation();
   const isActive = pathname.includes(to);
@@ -38,10 +43,15 @@ const IntroductionSection = ({ onStartClick }) => (
     <p className="text-gray-700">
       Welcome to the application process. Please follow the steps below to complete your application.
       Start your application here.{' '}
-      <button type="button" onClick={onStartClick} className="text-blue-500 underline">
+    </p>
+    <EligibilityChecker />
+    <button type="button" onClick={onStartClick} className="text-blue-500 underline">
         Start here
       </button>
+<<<<<<< HEAD
     </p>
+=======
+>>>>>>> d0055a3ad8e6634e5ba9b1ae00b473207a6735bb
   </div>
 );
 
@@ -159,10 +169,22 @@ const ApplicationProcess = () => {
             </nav>
           )}
 
+<<<<<<< HEAD
           <div className="container mx-auto mt-8">
             <h1>SOham</h1>
             <Outlet />
           </div>
+=======
+
+              {/* Add more links for other forms */}
+            </ul>
+          </nav>
+        )}
+
+        {/* Content Area */}
+        <div className="container mx-auto mt-8">
+          <Outlet />
+>>>>>>> d0055a3ad8e6634e5ba9b1ae00b473207a6735bb
         </div>
       </div>
     </>

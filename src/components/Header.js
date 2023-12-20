@@ -15,7 +15,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/homePage');
+    navigate('/loginPage');
   };
 
   return (
