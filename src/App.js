@@ -11,7 +11,6 @@ import Registration from './pages/Registraton';
 import HomePage from './pages/HomePage';
 import InstituteDetails from './pages/InstituteDetails';
 import { useState } from 'react';
-import PaymentProcess from './pages/PaymentProcess';
 import ContactPersonForm from './pages/contactPersonDetails';
 import TrusteeDetailsForm from './pages/trusteeDetails';
 import LandDetailsForm from './pages/LandDetails';
@@ -76,26 +75,20 @@ function App() {
         <Route path="/eligibility" element={<ElgibilityChecker />} />
         <Route path="/" element={<LandingPage />} />
         
-            <Route path="homePage" element={<HomePage />} />
-            <Route path="loginPage" element={<LoginPage  />} />
-            <Route path="registerPage" element={<Registration />} />
-            <Route path="payment-process" element={<PaymentProcess />} />
+            <Route path="/homePage" element={<HomePage />} />
+            <Route path="/loginPage" element={<LoginPage  />} />
+            <Route path="/registerPage" element={<Registration />} />
           
 
         
           <Route path="/dashboard" element={<Layout />} >
             <Route index={true} element={<Dashboard />} />
-            <Route path="institute-details" element={<InstituteDetails />} />
-            <Route path="contact-person-details" element={<ContactPersonForm />} />
-            <Route path="trustee-details" element={<TrusteeDetailsForm />} />
-            <Route path="land-details" element={<LandDetailsForm />} />
             <Route path="my-documents" element={<MyDocs />} />
             <Route path="payment" element={<Payments />} />
             <Route path="logout" element={<Logout  />} />
           </Route>
             <Route path="/chatbot" element={<ChatBot />} >
             </Route>
-            <Route path="/chatbot" element={<ChatBot />} ></Route>
             <Route path="/application-process" element={<ApplicationProcess />} >
               <Route path="institute-details" element={<InstituteDetails />}/>
               <Route path="more-institute-details" element={<InstituteForm />}/>

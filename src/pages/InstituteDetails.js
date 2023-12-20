@@ -32,7 +32,7 @@ const InstituteDetails = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormsFilled((prevFormsFilled) => prevFormsFilled + 1);
-
+    
   };
 
   return (
