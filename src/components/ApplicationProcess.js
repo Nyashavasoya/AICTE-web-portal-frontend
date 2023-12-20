@@ -6,7 +6,7 @@ import { FaDotCircle } from "react-icons/fa";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import FileUploadButton from './MyDocs';
-
+import EligibilityChecker from './EligibilityChecker';
 const FormNavItem = ({ to, iconClass, formName }) => {
   const { pathname } = useLocation();
   const isActive = pathname.includes(to);
@@ -27,11 +27,11 @@ const IntroductionSection = ({ onStartClick }) => (
     <p className="text-gray-700">
       Welcome to the application process. Please follow the steps below to complete your application.
       Start your application here.{' '}
-      <button type="button" onClick={onStartClick} className="text-blue-500 underline">
+    </p>
+    <EligibilityChecker />
+    <button type="button" onClick={onStartClick} className="text-blue-500 underline">
         Start here
       </button>
-      <FileUploadButton />
-    </p>
   </div>
 );
 
@@ -131,7 +131,6 @@ const ApplicationProcess = () => {
 
         {/* Content Area */}
         <div className="container mx-auto mt-8">
-          <h1>SOham</h1>
           <Outlet />
         </div>
       </div>

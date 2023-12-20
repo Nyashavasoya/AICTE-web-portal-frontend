@@ -69,6 +69,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/eligibility" element={<ElgibilityChecker />} />
+        <Route path="/my-documents" element={<MyDocs />}> </Route>
         <Route path="/" element={<LandingPage />} />
         
             <Route path="homePage" element={<HomePage />} />
@@ -76,14 +77,14 @@ function App() {
             <Route path="registerPage" element={<Registration />} />
           
 
-        
+          
           <Route path="/dashboard" element={<Layout />} >
             <Route index={true} element={<Dashboard />} />
             <Route path="institute-details" element={<InstituteDetails />} />
             <Route path="contact-person-details" element={<ContactPersonForm />} />
             <Route path="trustee-details" element={<TrusteeDetailsForm />} />
             <Route path="land-details" element={<LandDetailsForm />} />
-            <Route path="my-documents" element={<MyDocs />} />
+            
             <Route path="logout" element={<Logout  />} />
           </Route>
             <Route path="/chatbot" element={<ChatBot />} >
