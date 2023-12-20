@@ -39,6 +39,7 @@ import AboutUs from './components/AboutUs';
 import FAQs from './components/FAQs';
 import Footer from './components/Footer';
 import ElgibilityChecker from './components/EligibilityChecker';
+import axios from 'axios';
 function LandingPage() {
 
   return (
