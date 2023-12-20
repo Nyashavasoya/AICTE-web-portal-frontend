@@ -5,9 +5,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { FaDotCircle } from "react-icons/fa";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { IoMdMenu } from "react-icons/io";
-import QueryResolver from './QueryResolver';
-import Attachments from '../pages/Attachments';
+import FileUploadButton from './MyDocs';
 
 const FormNavItem = ({ to, iconClass, formName }) => {
   const { pathname } = useLocation();
@@ -32,7 +30,7 @@ const IntroductionSection = ({ onStartClick }) => (
       <button type="button" onClick={onStartClick} className="text-blue-500 underline">
         Start here
       </button>
-      <Attachments />
+      <FileUploadButton />
     </p>
   </div>
 );
