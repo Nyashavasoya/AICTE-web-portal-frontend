@@ -29,12 +29,6 @@ export const DASHBOARD_SIDEBAR_LINKS = [
 		path: '/chatbot',
 		icon: <CiChat2 />
 	},
-	{
-		key: 'payment',
-		label: 'Payment',
-		path: '/payment',
-		icon: <MdOutlinePayment />
-	}
 ]
 
 export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
