@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 const EligibilityChecker = () => {
   // State for image upload
   const [selectedImage, setSelectedImage] = useState(null);
-  
+  const [message,setMessage] = useState('')
   const handleImageChange = (e) => {
     setSelectedImage(e.target.files[0]);
   };
@@ -17,10 +17,14 @@ const EligibilityChecker = () => {
   // Handler for image upload
   const handleImageUpload = async(event) => {
     const file = event.target.files[0];
+    console.log(file);
     const formData = new FormData();
-    formData.append('image', selectedImage);
-    // const response = await  axios.post('http://localhost:3000/api/upload', formData)
-    // console.log(response.data.message)
+    formData.append('image', file);
+    console.log(formData)
+    const response = await  axios.post('http://localhost:3500/upload', formData)
+    console.log(response.data.message)
+    setMessage(response.data.message)
+    
   };
 
   // Handler for eligibility checkboxes
@@ -43,6 +47,7 @@ const EligibilityChecker = () => {
           {selectedImage && (
             <img src={selectedImage} alt="Uploaded" className="max-w-full h-auto rounded" />
           )}
+          {message && (<h1 className='text-blue-500'>Document Verified</h1>)}
         </div>
 
         {/* Second Column */}
