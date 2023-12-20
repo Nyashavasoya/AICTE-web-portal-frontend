@@ -26,12 +26,28 @@ const Registration = () => {
 
   const navigate = useNavigate();
 
-  const onSubmitHandler = () => {
-    navigate('/payment-process');
-  }
+
+  const isContactNumberValid = (contactNumber) => {
+    const regex = /^[0-9]{10}$/;
+    return regex.test(contactNumber);
+  };
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(!isValidEmail(contactPersonData.cpEmail)){
+      alert("Please enter a valid Email ID");
+    }
+    if(!isValidEmail(contactPersonData.confirmEmail)){
+      alert("Both emails should be same.");
+    }
+    if(!isContactNumberValid(contactPersonData.cpNumber)){
+      alert("Please provide a valid Contact Number");
+    }
     try {
       // Make a POST request to your backend endpoint
       const response = await axios.post('http://localhost:3500/auth/register', {
@@ -52,12 +68,9 @@ const Registration = () => {
   };
 
   const emailIdHandler = (confirmEmail) => {
-    if(confirmEmail === contactPersonData.cpEmail){
-      setConfirmEmail(confirmEmail);
-    }
-    else{
-      setConfirmEmail("");
-      alert("Wrong email");
+    setConfirmEmail(confirmEmail);
+    if(confirmEmail !== contactPersonData.cpEmail){
+      alert("Enter same email address to confirm");
     }
   }
 

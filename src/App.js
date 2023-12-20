@@ -85,9 +85,6 @@ function App() {
             <Route path="land-details" element={<LandDetailsForm />} />
             <Route path="my-documents" element={<MyDocs />} />
             <Route path="payment" element={<Payments />} />
-            <Route path="progress-tracker" element={<ProgressTracker />} />
-            <Route path="notice" element={<Notice />} />
-            <Route path="calender" element={<Calender />} />
             <Route path="logout" element={<Logout  />} />
           </Route>
             <Route path="/chatbot" element={<ChatBot />} >

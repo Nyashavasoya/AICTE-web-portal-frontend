@@ -30,80 +30,82 @@ const TrusteeDetailsForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-gray-100 rounded-md">
-      <h2 className="text-3xl font-bold mb-4">Trustee Details</h2>
+    <div className="w-3/4 mx-auto mt-8 bg-white p-4 border rounded shadow ">
+      <h2 className="text-2xl font-bold text-black mb-4">Trustee Details</h2>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className='flex flex-row flex-wrap'>
+      <div className='flex flex-row flex-wrap'>
         {/* Name */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Name:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Name:</label>
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+  className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Designation */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Designation:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Designation:</label>
           <input
             type="text"
             name="designation"
             value={formData.designation}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+  className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Since */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Since:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Since:</label>
           <input
             type="text"
             name="since"
             value={formData.since}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+  className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Till */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Till:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Till:</label>
           <input
             type="text"
             name="till"
             value={formData.till}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+  className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Mobile Number */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Mobile Number:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Mobile Number:</label>
           <input
             type="number"
             name="mobileNo"
             value={formData.mobileNo}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+  className="mt-1 p-2 border border-blue-500 rounded "
           />
         </div>
 
         {/* Email */}
-        <div>
-          <label className="block text-gray-800 text-sm font-medium mb-2">Email:</label>
+        <div className="mb-4 p-6">
+          <label className="block text-sm font-medium text-black">Email:</label>
           <input
             type="text"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
+  className="mt-1 p-2 border border-blue-500 rounded "
           />
+        </div>
         </div>
 
         {/* Submit Button */}
