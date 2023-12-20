@@ -7,7 +7,6 @@ import MyDocs from './components/MyDocs';
 import Logout from './components/Logout';
 import LoginPage from './pages/LoginPage';
 import Registration from './pages/Registraton';
-import HomePage from './pages/HomePage';
 import InstituteDetails from './pages/InstituteDetails';
 import { useState } from 'react';
 import PaymentProcess from './pages/PaymentProcess';
@@ -72,7 +71,6 @@ function App() {
         <Route path="/my-documents" element={<MyDocs />}> </Route>
         <Route path="/" element={<LandingPage />} />
         
-            <Route path="homePage" element={<HomePage />} />
             <Route path="loginPage" element={<LoginPage  />} />
             <Route path="registerPage" element={<Registration />} />
           
