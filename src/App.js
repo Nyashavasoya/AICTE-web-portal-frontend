@@ -70,29 +70,14 @@ function App() {
         <Route path="/my-documents" element={<MyDocs />}> </Route>
         <Route path="/" element={<LandingPage />} />
         
-<<<<<<< HEAD
-            <Route path="/homePage" element={<HomePage />} />
             <Route path="/loginPage" element={<LoginPage  />} />
             <Route path="/registerPage" element={<Registration />} />
-=======
-            <Route path="loginPage" element={<LoginPage  />} />
-            <Route path="registerPage" element={<Registration />} />
->>>>>>> d0055a3ad8e6634e5ba9b1ae00b473207a6735bb
           
 
           
           <Route path="/dashboard" element={<Layout />} >
             <Route index={true} element={<Dashboard />} />
-<<<<<<< HEAD
             <Route path="my-documents" element={<MyDocs />} />
-            <Route path="payment" element={<Payments />} />
-=======
-            <Route path="institute-details" element={<InstituteDetails />} />
-            <Route path="contact-person-details" element={<ContactPersonForm />} />
-            <Route path="trustee-details" element={<TrusteeDetailsForm />} />
-            <Route path="land-details" element={<LandDetailsForm />} />
-            
->>>>>>> d0055a3ad8e6634e5ba9b1ae00b473207a6735bb
             <Route path="logout" element={<Logout  />} />
           </Route>
             <Route path="/chatbot" element={<ChatBot />} >
